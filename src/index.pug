@@ -1,3 +1,5 @@
+include ./ui_kit/dropdown/dropdown
+
 html
   head
     title Tøxin Hotel
@@ -6,3 +8,4 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body
     .wrapper
+      +dropdown({items: ['Спальня', 'Кровать', 'Ванные комнаты']})
