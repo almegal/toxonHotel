@@ -12,7 +12,7 @@ const config = {
   },
   devServer: {
     port: 3000,
-    contentBase: path.join(__dirname, 'src/public')
+    contentBase: path.join(__dirname, 'src/')
   },
   plugins: [
     new MiniCssExtractPlugin({
