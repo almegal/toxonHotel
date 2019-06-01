@@ -1,39 +1,58 @@
+//import size for dropdown block
+@import "./_size/dropdown_size";
 /*
 START DEFAULT DROPDOWN STYLE
 */
 .dropdown {
-  width: 266px;;
+  //remove all margin and padding
+  margin: 0;
+  padding: 0;
+  //responsive
+  width: 100%;
+  .dropdown__title {
+      letter-spacing: 1;
+      margin-bottom: 3px;
+  }
   .dropdown__input {
     height: 44px;
+    box-sizing: border-box;
     //
     border: 1px solid rgba(31, 32, 65, 0.5);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     // make flex
     display: flex;
     justify-content: space-between;
     align-items: center;
     //
     p, span {
-      margin: 15px;
+      letter-spacing: 0.6;
+      margin: 12px 14px 15px 15px;
     }
     // add arrow
     .dropdown__arrow:before {
+      //cursor lika a hand
+      cursor: pointer;
+      // arrow
       content: '\2329';
       display: inline-block;
       margin-top: 10px;
       transform: rotate(-90deg);
     }
   }
+  //default not show expended block
   .dropdown__expended {
     display: none;
   }
+  // when ative - show
   .dropdown__expended.dropdown-active {
+    padding-bottom: 3px;
     //border color and radius
     border: 1px solid rgba(31, 32, 65, 0.5);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-top: none;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     // display
     display: flex;
     flex-wrap: wrap;
@@ -41,17 +60,23 @@ START DEFAULT DROPDOWN STYLE
       width: 100%;
       display: flex;
       align-items: center;
-      h3 {
+      margin: 4px 0;
+      .item__title {
+        letter-spacing: 0.6;
         width: 70%;
         margin-left: 15px;
       }
       .item__value {
         display: flex;
         align-items: center;
-        button, p {
-          margin-right: 15px;
+      //  margin-left: 15px;
+        button, h3 {
+          width: initial;
+          margin: 0 6px;
         }
         button {
+          cursor: pointer;
+          border: 1px solid rgba(31, 32, 65, 0.25);
           border-radius: 50%;
           width: 30px;
           height: 30px;
@@ -61,7 +86,10 @@ START DEFAULT DROPDOWN STYLE
         }
         button:active {
           border-style: solid;
-          transform: scale(0.9);
+          transform: scale(0.95);
+        }
+        button:disabled {
+          border-color: rgba(31, 32, 65, 0.10);
         }
       }
     }

@@ -1,8 +1,8 @@
 mixin dropdown(options)
-  .dropdown
+  .dropdown.dropdown_size_m
     h3(class='dropdown__title') dropdown
     .dropdown__input
-      p(class='dropdown__placeholder') 2 Спальни, 2 кровати...
+      p(class='dropdown__placeholder') Сколько гостей
       span(class='dropdown__arrow' data-arrow='arrow')
     .dropdown__expended
       - for (var i = 0; i < options.items.length; i++) {
@@ -10,6 +10,6 @@ mixin dropdown(options)
           h3(class='item__title')= options.items[i]
           .item__value
             button -
-            p 2
+            h3(class='item__title') 2
             button +
       - }

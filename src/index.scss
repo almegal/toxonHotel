@@ -1,5 +1,5 @@
 @import "./ui_kit/dropdown/dropdown";
-
+@import "./mixin";
 /* START BASE CUSTOM */
 html, body {
   margin: 0;
@@ -11,21 +11,21 @@ body {
 }
 
 h1 {
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
 }
 h2 {
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
 }
 h3 {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -38,7 +38,9 @@ h1, h2, h3 {
   color: #1F2041;
 }
 p, span {
-  font-family: Montserrat;
+  margin: 0;
+  
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
