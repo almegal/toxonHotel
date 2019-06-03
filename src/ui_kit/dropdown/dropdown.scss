@@ -4,6 +4,14 @@
 START DEFAULT DROPDOWN STYLE
 */
 .dropdown {
+  // disabled selection text
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
+
   //remove all margin and padding
   margin: 0;
   padding: 0;
@@ -59,14 +67,15 @@ START DEFAULT DROPDOWN STYLE
     .item {
       width: 100%;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin: 4px 0;
       .item__title {
         letter-spacing: 0.6;
-        width: 70%;
         margin-left: 15px;
       }
-      .item__value {
+      .item__content {
+        margin-right: 5px;
         display: flex;
         align-items: center;
       //  margin-left: 15px;
@@ -91,6 +100,23 @@ START DEFAULT DROPDOWN STYLE
         button:disabled {
           border-color: rgba(31, 32, 65, 0.10);
         }
+      }
+    }
+    .dropdown__buttons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 15px 0 5 0;
+      h3 {
+        margin: 0 15px;
+        // make cursor
+        cursor: pointer;
+      }
+      .dropdown__clear {
+        color: rgba(31, 32, 65, 0.5);
+      }
+      .dropdown__apply {
+        color: #BC9CFF;
       }
     }
   }

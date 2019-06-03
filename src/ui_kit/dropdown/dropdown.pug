@@ -1,15 +1,25 @@
 mixin dropdown(options)
-  .dropdown.dropdown_size_m
-    h3(class='dropdown__title') dropdown
+  - let className = 'dropdown '
+  - if (options.modificator) {
+  -   className = className + options.modificator
+  - }
+  
+  div(class=className)
+    h3(class='dropdown__title')= options.title
     .dropdown__input
-      p(class='dropdown__placeholder') Сколько гостей
-      span(class='dropdown__arrow' data-arrow='arrow')
+      p(class='dropdown__placeholder')= options.placeHolder
+      span(class='dropdown__arrow' data-action='arrow')
     .dropdown__expended
       - for (var i = 0; i < options.items.length; i++) {
         .item
           h3(class='item__title')= options.items[i]
-          .item__value
-            button -
-            h3(class='item__title') 2
-            button +
+          .item__content
+            button(data-action='btn-minus') -
+            h3(class='item__value') 2
+            button(data-action='btn-plus') +
+      - }
+      - if (options.btn) {
+         .dropdown__buttons
+          h3(class='dropdown__clear', data-action='clear') очистить
+          h3(class='dropdown__apply', data-action='apply') применить
       - }
