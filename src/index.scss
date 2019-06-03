@@ -1,4 +1,15 @@
+/* START VARIABLES */
+  $DARK_100: #1F2041;
+  $DARK_75: rgba(31, 32, 65, 0.75);
+  $DARK_50: rgba(31, 32, 65, 0.5);;
+  $DARK_25: rgba(31, 32, 65, 0.25);;
+  $DARK_5: rgba(31, 32, 65, 0.05);;
+  $PURPLE: #BC9CFF;
+  $GREEN: #6FCF97;
+/*END VARIABLES*/
+
 @import "./ui_kit/dropdown/dropdown";
+@import "./ui_kit/radiobutton/radiobutton";
 @import "./mixin";
 /* START BASE CUSTOM */
 html, body {
@@ -33,11 +44,12 @@ h3 {
   text-transform: uppercase;
 }
 h1, h2, h3 {
+  letter-spacing: 0.6;
   margin: 0;
   padding: 0;
-  color: #1F2041;
+  color: $DARK_100;
 }
-p, span {
+p, span, label {
   margin: 0;
 
   font-family: Montserrat, sans-serif;
@@ -45,7 +57,7 @@ p, span {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  color: $DARK_75;
 }
 /* END BASE CUSTOM */
 

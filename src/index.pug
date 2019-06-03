@@ -1,4 +1,4 @@
-include ./ui_kit/dropdown/dropdown
+include ./ui_kit/radiobutton/radiobutton
 
 html
   head
@@ -9,9 +9,6 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +dropdown({ title: 'Удобство',
-                  items: ['Спальни', 'Кровати', 'Ванные комнаты'],
-                  placeHolder: '2 спальни, 2 кровати...',
-                  modificator: 'dropdown_size_s',
-                  btn: true
-                })
+      +radiobutton({ title: 'radio buttons',
+                  items: ['Мужчина', 'Женщина']
+                  })

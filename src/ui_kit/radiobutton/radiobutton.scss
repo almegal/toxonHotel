@@ -1,0 +1,66 @@
+.radiobutton {
+  // make one by one
+  .radiobutton__block {
+    margin-top: 10px;
+    display: flex;
+    .radiobutton__container {
+      margin-right: 15px;
+      position: relative;
+      .radiobutton__label {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        padding-bottom: 0px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      // disable standart checked button
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      // create a custom checkmark
+      .radiobutton__checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #FFFFFF;
+        border: 1px solid $DARK_25;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .radiobutton__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      input:checked ~ .radiobutton__checkmark:after {
+        display: block;
+      }
+      // style border-color when checked
+      input:checked ~ .radiobutton__checkmark {
+        border-color: $PURPLE;
+      }
+      /* Style the checkmark/indicator */
+      .radiobutton__checkmark:after {
+        width: 12px;
+        margin-left: 3px;
+        margin-top: 3px;
+        height: 12px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      }
+  }
+  }
+}
