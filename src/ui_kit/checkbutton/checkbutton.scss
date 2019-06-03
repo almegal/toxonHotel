@@ -28,16 +28,7 @@
         height: 0;
         width: 0;
       }
-      /* Create the checkmark/indicator (hidden when not checked) */
-      .checkbutton__checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-      /* Show the checkmark when checked */
-      input:checked ~ .checkbutton__checkmark:after {
-        display: block;
-      }
+
       // style border-color when checked
       input:checked ~ .checkbutton__checkmark {
         border-color: $PURPLE;
