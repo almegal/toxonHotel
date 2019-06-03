@@ -1,0 +1,14 @@
+mixin checkbutton(options)
+  - let className = 'checkbutton '
+  - if (options.modificator) {
+  -   className = className + options.modificator
+  - }
+  div(class=className)
+    h3(class='checkbutton__title')= options.title
+    .checkbutton__block
+      - for (var i = 0; i < options.items.length; i++) {
+        .checkbutton__container
+          label(class="checkbutton__label")= options.items[i]
+            input(type="checkbox" checked='checked')
+            span(class="checkbutton__checkmark")
+      - }

@@ -1,4 +1,4 @@
-include ./ui_kit/radiobutton/radiobutton
+include ./ui_kit/checkbutton/checkbutton
 
 html
   head
@@ -9,7 +9,7 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +radiobutton({ title: 'radio buttons',
+      +checkbutton({ title: 'radio buttons',
                   items: ['Мужчина', 'Женщина'],
-                  modificator: 'radiobutton_theme_putple radiobutton_type_radio',
+                  modificator: 'checkbutton_type_box',
                   })
