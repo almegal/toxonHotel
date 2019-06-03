@@ -10,8 +10,8 @@
 
 
 @import "./ui_kit/dropdown/dropdown";
-@import "./ui_kit/radiobutton/radiobutton";
-@import "./mixin";
+@import "./ui_kit/checkbutton/checkbutton";
+//@import "./mixin";
 /* START BASE CUSTOM */
 html, body {
   margin: 0;
@@ -52,13 +52,12 @@ h1, h2, h3 {
 }
 p, span, label {
   margin: 0;
-
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: $DARK_75;
+  color: $DARK_50;
 }
 /* END BASE CUSTOM */
 

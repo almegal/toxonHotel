@@ -1,0 +1,54 @@
+.checkbutton.checkbutton_type_radio {
+  // create a custom checkmark
+  .checkbutton__checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #FFFFFF;
+    border: 1px solid $DARK_25;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  /* Style the checkmark/indicator */
+  .checkbutton__checkmark:after {
+    width: 12px;
+    margin-left: 3px;
+    margin-top: 3px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+}
+
+.checkbutton.checkbutton_type_box {
+  // show element in row
+  .checkbutton__block {
+    display: block;
+  }
+  // create a custom checkmark
+  .checkbutton__checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #FFFFFF;
+    border: 1px solid $DARK_25;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  /* Style the checkmark/indicator */
+  .checkbutton__checkmark:after {
+    margin-left: 5.4px;
+    margin-top: 3px;
+    width: 4px;
+    height: 7px;
+    border: solid #BC9CFF;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
