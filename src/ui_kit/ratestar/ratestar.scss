@@ -1,0 +1,11 @@
+.ratestar {
+  margin: 0;
+  padding: 0;
+  .ratestar__star:after {
+    content: '\2606';
+    color: $PURPLE;
+  }
+  .ratestar__star.active:after {
+    content: '\2605';
+  }
+}

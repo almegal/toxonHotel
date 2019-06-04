@@ -1,4 +1,4 @@
-include ./ui_kit/checkbutton/checkbutton
+include ./ui_kit/ratestar/ratestar
 
 html
   head
@@ -9,7 +9,4 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +checkbutton({ title: 'toggle',
-                  items: ['Получать спецпредложения'],
-                  modificator: 'checkbutton_type_toggle',
-                  })
+      +ratestar({count: 5})

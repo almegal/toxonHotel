@@ -1,0 +1,5 @@
+mixin ratestar(options)
+  .ratestar
+    - for (var i = 0; i < options.count; i++) {
+      span(class='ratestar__star', data-star=i)
+    -}
