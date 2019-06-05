@@ -1,0 +1,9 @@
+mixin bulletlist(options)
+  .bulletlist
+    h3(class='bulletlist__title')= options.title
+    .bulletlist__list
+      ul
+        - for (var i = 0; i < options.items.length; i++) {
+          li(class='bulletlist__list')
+            p= options.items[i]
+        - }

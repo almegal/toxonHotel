@@ -1,0 +1,21 @@
+.bulletlist {
+  width: 100%;
+  .bulletlist__list {
+    ul {
+      padding-left: 0px;
+      li {
+        list-style: none;
+        display: flex;
+        margin-top: 3px;
+      }
+      li:before {
+          margin-right: 10px;
+          margin-top: -11px;
+          content: "\2022";
+          color: $DARK_25; /* Change the color */
+          display: inline-block; /* Needed to add space between the bullet and the text */
+          font-size: 40px;
+        }
+      }
+    }
+}
