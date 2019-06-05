@@ -1,5 +1,9 @@
 mixin ratestar(options)
   .ratestar
     - for (var i = 0; i < options.count; i++) {
+    -  if (i < options.rating) {
+        span(class='ratestar__star active', data-star=i)
+    -  } else {
       span(class='ratestar__star', data-star=i)
-    -}
+      - }
+    - }
