@@ -1,4 +1,4 @@
-include ./ui_kit/expendcheckbox/expendcheckbox
+include ./ui_kit/textfield/textfield
 
 html
   head
@@ -9,4 +9,4 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +expendcheckbox({title:'expandable checkbox list' ,checkbutton: {title: '', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], modificator: 'checkbutton_type_box'}})
+      +textfield({placeholder: 'DD.MM.YYYY', type: 'email', title: 'text field', mask: 'dd.mm.yyyy'})

@@ -1,0 +1,5 @@
+mixin textfield(options)
+  - var mask = options.mask || null
+  .textfield
+    h3(class='textfield__title')= options.title
+    input(class='textfield__input', placeholder=options.placeholder, type=options.type, data-mask=mask)
