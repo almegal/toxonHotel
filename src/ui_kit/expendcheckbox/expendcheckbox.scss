@@ -1,0 +1,27 @@
+.expendcheckbox {
+  .expendcheckbox__header {
+    // one row
+    display: flex;
+    justify-content: space-between;
+    // making arrow
+    .expendcheckbox__arrow:before{
+      //cursor lika a hand
+      cursor: pointer;
+      // arrow
+      content: '\2329';
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+    .expendcheckbox__arrow.open:before {
+      top: -7px;
+      position: relative;
+      transform: rotate(90deg);
+    }
+  }
+  .expendcheckbox__content {
+    display: none;
+  }
+  .expendcheckbox__content.expendcheckbox-active {
+    display: initial;
+  }
+}

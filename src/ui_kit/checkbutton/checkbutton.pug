@@ -9,6 +9,6 @@ mixin checkbutton(options)
       - for (var i = 0; i < options.items.length; i++) {
         .checkbutton__container
           label(class="checkbutton__label")= options.items[i]
-            input(type="checkbox" checked='checked')
+            input(type="checkbox")
             span(class="checkbutton__checkmark")
       - }

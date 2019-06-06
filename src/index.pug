@@ -1,4 +1,4 @@
-include ./ui_kit/bulletlist/bulletlist
+include ./ui_kit/expendcheckbox/expendcheckbox
 
 html
   head
@@ -9,4 +9,4 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +bulletlist({title: 'bullet list', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00']})
+      +expendcheckbox({title:'expandable checkbox list' ,checkbutton: {title: '', items: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь'], modificator: 'checkbutton_type_box'}})

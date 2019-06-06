@@ -1,0 +1,11 @@
+include ../checkbutton/checkbutton
+
+mixin expendcheckbox(options)
+
+  -
+  .expendcheckbox
+    .expendcheckbox__header
+      h3= options.title
+      span(class='expendcheckbox__arrow', data-action='arrow')
+    .expendcheckbox__content
+      +checkbutton(options.checkbutton)
