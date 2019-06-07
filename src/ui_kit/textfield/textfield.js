@@ -15,7 +15,7 @@ const onInput = e => {
   // if press backspace just return
   if (e.keyCode === 8) {
     return;
-  } else if (value.length == 2 || value.length == 5) { // if length euqal 2 or 5
+  } else if ((value.length == 2 || value.length == 5) && parseInt(e.key)) { // if length euqal 2 or 5
     // add point
     e.target.value = value + '.'
   } else if (value.length == 10 || !parseInt(e.key)) { // if equal 10 or it is not a digital
