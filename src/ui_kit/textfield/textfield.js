@@ -12,14 +12,21 @@ const onInput = e => {
   if (!mask) return;
   // get valut in input
   const value = e.target.value;
-  // if press backspace just return
-  if (e.keyCode === 8) {
+  // if press zero or digital just return;
+  if (e.keyCode == 48 || parseInt(e.key)) {
+    // if length 2 or 5
+    if (value.length == 2 || value.length == 5) {
+      // add dot
+      e.target.value = value + '.';
+      // if length equal 10
+    } else if (value.length == 10) {
+      e.preventDefault(); // stop event and return
+    }
+  } else if (e.keyCode == 8) { // if backspace just return
     return;
-  } else if ((value.length == 2 || value.length == 5) && parseInt(e.key)) { // if length euqal 2 or 5
-    // add point
-    e.target.value = value + '.'
-  } else if (value.length == 10 || !parseInt(e.key)) { // if equal 10 or it is not a digital
-    e.preventDefault(); // stop event and return
+  // if not digital
+  }  else {
+    e.preventDefault() // stop event and return
   }
   return;
 }
