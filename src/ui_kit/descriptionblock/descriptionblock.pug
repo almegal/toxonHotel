@@ -1,0 +1,19 @@
+mixin descriptionblock(options)
+  .descriptionblock
+    h3(class='descriptionblock__title')= options.title
+    .descriptionblock__content
+      - for (var i = 0; i < options.items.length; i++) {
+          .item
+            .item__header
+              img(src=options.items[i].img, height=48, width=48)
+              .item__title
+                p= options.items[i].title
+                p(class='item__text')= options.items[i].content
+            -if (options.items[i].subcontent) {
+               .item__content
+                  p= options.items[i].subcontent
+            -}
+      -if (options.line) {
+          hr
+      -}
+      - }

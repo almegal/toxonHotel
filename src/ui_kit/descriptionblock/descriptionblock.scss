@@ -1,0 +1,36 @@
+.descriptionblock {
+  width: 100%;
+  .descriptionblock__content {
+    margin-top: 20px;
+    hr {
+      margin: 20px 0;
+      border-color: $DARK_5;
+    }
+    .item {
+      margin-top: 20px;
+      display: flex;
+      flex-flow: column;
+      //
+      .item__header {
+        display: flex;
+        img {
+          margin-right: 15px;
+        }
+        //
+        .item__title {
+          p {
+            font-weight: bolder;
+            color: $DARK_75;
+          }
+          .item__text {
+            color: $DARK_50;
+            font-weight: normal;
+          }
+        }
+      }
+      .item__content {
+        margin-top: 10px;
+      }
+    }
+  }
+}
