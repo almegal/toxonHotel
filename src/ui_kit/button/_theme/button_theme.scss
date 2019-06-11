@@ -24,3 +24,16 @@
     color: $PURPLE;
   }
 }
+.button.button_theme_empty {
+  height: initial;
+  .button__placeholder {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $PURPLE;
+    &:hover {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}
