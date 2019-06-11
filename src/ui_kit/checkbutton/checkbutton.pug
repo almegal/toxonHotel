@@ -8,7 +8,8 @@ mixin checkbutton(options)
     .checkbutton__block
       - for (var i = 0; i < options.items.length; i++) {
         .checkbutton__container
-          label(class="checkbutton__label")= options.items[i]
+          label(class="checkbutton__label")= options.items[i].title
             input(type="checkbox")
             span(class="checkbutton__checkmark")
+          p(class='checkbox__text')= options.items[i].content
       - }
