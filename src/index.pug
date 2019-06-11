@@ -1,4 +1,4 @@
-include ./ui_kit/checkbutton/checkbutton
+include ./ui_kit/button/button
 
 html
   head
@@ -9,11 +9,7 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +checkbutton({
-        title: 'Отзывы посетителей номера',
-        items: [
-          {title: 'Широкоий коридор', content: 'Ширина коридоров в номере не менее 91 см.'},
-          {title: 'Помощник для инвалидов', content: 'На 1 этаже вас встретит специалист  и проводит до номера.'},
-        ],
-        modificator: 'checkbutton_type_richbox'
+      +button({
+        placeHolder: 'click me',
+        modificator: 'button_theme_shape'
       })

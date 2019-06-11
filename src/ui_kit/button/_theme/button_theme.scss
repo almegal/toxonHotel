@@ -1,0 +1,26 @@
+.button.button_theme_fill {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  &:hover {
+    opacity: 0.5;
+  }
+  .button__placeholder {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
+.button.button_theme_shape {
+  border: 2px solid $PURPLE;
+  &:hover {
+    border: 2px solid rgba(145, 162, 249, 0.5);
+  }
+  .button__placeholder {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $PURPLE;
+  }
+}

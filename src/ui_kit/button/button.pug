@@ -1,0 +1,7 @@
+mixin button(options)
+  - let className = 'button '
+  - if (options.modificator) {
+  -   className = className + options.modificator
+  - }
+  div(class=className)
+    p(class='button__placeholder')= options.placeHolder
