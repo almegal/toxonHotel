@@ -32,6 +32,9 @@
         margin-top: 10px;
         display: flex;
         align-items: baseline;
+        .item__subcontent {
+          margin-left: 20px;
+        }
       }
     }
   }

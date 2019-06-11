@@ -1,6 +1,7 @@
 mixin likebutton(options)
   .likebutton
-    label(class="likebutton__label")
-      input(type="checkbox")
-      span(class="likebutton__checkmark")
-      span(class='likebutton__content')= options.count
+    .likebutton__container
+      label(class="likebutton__label")
+        input(type="checkbox")
+        span(class="likebutton__checkmark")
+        span(class='likebutton__content')= options.count

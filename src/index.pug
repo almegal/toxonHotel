@@ -1,4 +1,5 @@
 include ./ui_kit/descriptionblock/descriptionblock
+include ./ui_kit/likebutton/likebutton
 
 html
   head
@@ -10,19 +11,9 @@ html
   body  
     .wrapper
       +descriptionblock({
-        title: 'text field',
-        items: [
-          {img: 'public/smille.svg', title: 'Комфорт', content: 'Шумопоглощающие стены',},
-          {img: 'public/comfort.svg', title: 'Удобство', content: 'Окно в каждой из спален'},
-          {img: 'public/fire.svg', title: 'Уют', content: 'Номер оснащён камином'}
-        ],
-        line: true
-      })
-
-      +descriptionblock({
         title: 'Отзывы посетителей номера',
         items: [
-          {img: 'public/review1.png', title: 'Мурад Сафранов', content: 'неделю назад', subcontent: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'},
-          {img: 'public/review2.png', title: 'Патрисия Стеклышкинв', content: '5 дней назад', subcontent: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'},
+          {img: 'public/review1.png', title: 'Мурад Сафранов', content: 'неделю назад', subcontent: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', likeCount: 4},
+          {img: 'public/review2.png', title: 'Патрисия Стеклышкинв', content: '5 дней назад', subcontent: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', likeCount: 12},
         ]
       })

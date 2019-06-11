@@ -1,50 +1,52 @@
 .likebutton {
-  width: 40px;
-  .likebutton__label {
-    width: 100%;
-    display: block;
-    position: relative;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    // disable default imput
-    input {
-      pointer-events: none;
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-    /* Create the checkmark/indicator (hidden when not checked) */
-    .likebutton__checkmark:after {
-      content: "\2665";
-      position: absolute;
-      left: 5px;
-      top: -3px;
-    }
-    .likebutton__checkmark {
-      position: absolute;
-      height: 20px;
-      width: 40px;
-      font-size: 10px;
-      background: #FFFFFF;
-      border: 1px solid $DARK_25;
-      box-sizing: border-box;
-      border-radius: 10px;
-    }
-    .likebutton__content {
-      font-size: 10px;
-      padding-left: 22px;
+  .likebutton__container {
+    width: 40px;
+    .likebutton__label {
+      width: 100%;
+      display: block;
       position: relative;
-      top: -2px;
-    }
-    input:checked ~ .likebutton__checkmark,
-    input:checked ~ .likebutton__content {
-      border-color: $PURPLE;
-      color: $PURPLE;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      // disable default imput
+      input {
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .likebutton__checkmark:after {
+        content: "\2665";
+        position: absolute;
+        left: 5px;
+        top: -3px;
+      }
+      .likebutton__checkmark {
+        position: absolute;
+        height: 20px;
+        width: 40px;
+        font-size: 10px;
+        background: #FFFFFF;
+        border: 1px solid $DARK_25;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      .likebutton__content {
+        font-size: 10px;
+        padding-left: 22px;
+        position: relative;
+        top: -2px;
+      }
+      input:checked ~ .likebutton__checkmark,
+      input:checked ~ .likebutton__content {
+        border-color: $PURPLE;
+        color: $PURPLE;
+      }
     }
   }
 }

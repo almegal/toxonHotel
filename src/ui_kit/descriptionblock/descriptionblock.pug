@@ -1,3 +1,4 @@
+include ../likebutton/likebutton
 mixin descriptionblock(options)
   .descriptionblock
     h3(class='descriptionblock__title')= options.title
@@ -10,8 +11,9 @@ mixin descriptionblock(options)
                 p= options.items[i].title
                 p(class='item__text')= options.items[i].content
             -if (options.items[i].subcontent) {
-               .item__content
-                  p= options.items[i].subcontent
+              .item__content
+                +likebutton({count: options.items[i].likeCount})
+                p(class='item__subcontent')= options.items[i].subcontent
             -}
       -if (options.line) {
           hr
