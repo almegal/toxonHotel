@@ -1,12 +1,12 @@
 # Сайт для поиска и броннирования отеля.
-> Был сделан в качестве работы для портфолио.
+> Cделан в качестве работы для портфолио.
 > Tøxin Hotel
 
 
 Для просмотра сайта перейдите по ссылке [GitHub Pages](https://localhost:3000)
 
 
-Для локального запуска используйте команды
+## Installation
 ```bash
 git clone https://github.com/almegal/toxonHotel
 npm install
@@ -14,8 +14,8 @@ npm run start:dev
 ```
 Написан с использованием pug.
 
-### Доступные компоненты для использования и их свойства
-Каждый компонетн (блок) имеет переменные которые передаются в основном файле pug;
+## Usage
+Каждый компонент (блок) принимает несколько аргументов ;
 
 - bulletlist
   - title (type=string)
@@ -59,32 +59,63 @@ npm run start:dev
 - datadropdown
   - title (type=string)
   - items (type=array)
-  - modificator (type=string)
+  - modificator (type=string) *not requiring*
+  - btn (type=boolean) *not requiring*
+
+**example:**
+  ```pug
+  +datadropdown({
+    title: 'how many guests',
+    items: ['adults', 'childs', 'babys'],
+    midificator: 'blockname_type_modificator',
+    btn: true
+  })
+ ```     
 - descriptionblock
   - title (type=string)
-  - items (type=array)
+  - items (type=array of objects)
     - img (type=href)
     - title (type=string)
-    - subcontent (type=string)
-    - count (type=digital)
-  - modificator (type=string)
+    - content (type=string)
+    - subcontent (type=string) *not requiring*
+    - count (type=digital) *not requiring*
+  - modificator (type=string) *not requiring*
+
+**example:**
+  ```pug
+  +descriptionblock({
+    title: 'reviews',
+    items: [{img: /path/to/img, content: '5 days ago' , title: 'Jonh Week review', subcontent:'Cool room', count: 12}],
+    midificator: 'blockname_type_modificator',
+  })
+ ```       
 - dropdown
   - title (type=string)
   - items (type=array)
   - modificator (type=string)
+
+
 - expendedcheckbox
   - title (type=string)
   - items (type=array)
   - modificator (type=string)
+
+
 - likebutton
   - title (type=string)
   - items (type=array)
   - modificator (type=string)
+
+
 - ratestar
   - title (type=string)
   - items (type=array)
   - modificator (type=string)
+
+
 - textfield
   - title (type=string)
   - items (type=array)
   - modificator (type=string)
+
+  
