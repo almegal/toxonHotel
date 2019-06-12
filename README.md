@@ -20,26 +20,42 @@ npm run start:dev
 - bulletlist
   - title (type=string)
   - items (type=array)
-  - modificator (type=string)
+  - modificator (type=string) *not requiring*
 
 **example:**
  ```pug
-  include ../path/to/block
-  +bulletlist(
+  +bulletlist({
     title: 'some text'
     items: ['no smoke', 'no party', 'no pets'],
     midificator: 'blockname_type_modificator'
-    )
+    })
  ```
 - button
   - placeHolder (type=string)
-  - modificator (type=string)
+  - modificator (type=string) *not requiring*
+
+**example:**
+  ```pug
+  +button({
+    placeHolder: 'click me',
+    midificator: 'blockname_type_modificator'
+  })
+ ```  
 - checkbutton
   - title (type=string)
-  - items (type=array)
+  - items (type=array of objects)
     - title (type=string)
-    - content (type=string)
-  - modificator (type=string)
+    - content (type=string) *not requiring*
+  - modificator (type=string) *not requiring*
+
+**example:**
+  ```pug
+  +checkbutton({
+    title: 'check some staff',
+    items: [{title: 'smoking', content: 'description about smoking'}],
+    midificator: 'blockname_type_modificator'
+  })
+ ```    
 - datadropdown
   - title (type=string)
   - items (type=array)
