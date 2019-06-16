@@ -1,0 +1,19 @@
+mixin calendar(options)
+	.calendar
+		.datedropdown
+			.datedropdown__header
+				h3 прибытие
+				.datedropdown__input
+					p DD.MM.YYYY
+					span(data-action='arrow' class='datedropdown__arrow')
+			.datedropdown__header
+				h3 выезд
+				.datedropdown__input
+					p DD.MM.YYYY
+					span(data-action='arrow' class='datedropdown__arrow')
+		.calendar__content
+			.widget__header
+				img(src='public/leftarrow.svg' heigth='24' width='24' class='widget__leftarrow')
+				h2(class='widget__title') 
+				img(src='public/rightarrow.svg' heigth='24' width='24' class='widget__rigtharrow')
+			.widget__content

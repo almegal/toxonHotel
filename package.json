@@ -17,7 +17,9 @@
     "url": "https://github.com/almegal/toxonHotel/issues"
   },
   "homepage": "https://github.com/almegal/toxonHotel#readme",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
   "devDependencies": {
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
