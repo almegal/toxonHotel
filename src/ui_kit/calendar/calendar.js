@@ -1,7 +1,8 @@
 // imports action
 import { arrowAction } from './action/arrowAction.js';
-// 
+//  import helpers
 import { addWidget } from './widget/addWidget.js'
+import { initializationStata } from './widget/initializationStata.js'
 // 
 // get all calendar elements as html collections
 const calendars = document.getElementsByClassName('calendar');
@@ -19,13 +20,15 @@ const clickHandler = e => {
 	 		// get calendar__content element 
 	 		const element = e.currentTarget.children[1]
 	 		return arrowAction(element); 
-	 	case '':
+	 	case 'left':
+	 		console.log(action)
 	 		return 	
 	 }
 }
 // 
-// 
+// initialize state
+const data = initializationStata();
 for (let calendar of calendars) {
-	addWidget(calendar, {title: 'June 2019'});
+	addWidget(calendar, data);
 	calendar.onclick = clickHandler;
 };

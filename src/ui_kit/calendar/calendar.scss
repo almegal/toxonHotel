@@ -38,20 +38,70 @@
 	}
 	// styling calendar
 	.calendar__content {
+		// diable default display
 		display: none;
 		margin-top: 5px;
+		//  add box
 		width: 100%;
 		height: 369px;
+		//  add border and shadow
 		background: #FFFFFF;
 		border: 1px solid rgba(31, 32, 65, 0.25);
 		box-sizing: border-box;
 		box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 		border-radius: 4px;
+		// 
 		.widget__header {
 			margin-top: 20px;
 			display: flex;
-			justify-content: space-around;
+			justify-content: space-between;
 			align-items: center;
+			img {
+				padding: 0 20px;
+				cursor: pointer;
+			}
+		}
+		.widget__content {
+			padding: 20 0 0 0; 
+			ul {
+				padding: 0;
+				list-style: none;
+				li {
+					p {
+						font-family: Montserrat, sans-serif;
+						font-style: normal;
+						font-weight: bold;
+						font-size: 12px;
+						line-height: 15px;
+						color: $PURPLE;
+					}
+				}
+			}
+			.widget__nameweek {
+			    padding: 0px 20px;
+				display: flex;
+				justify-content: space-around;
+			}
+			.widget__days {
+			    display: flex;
+			    flex-wrap: wrap;
+			    margin-left: 20px;
+			    text-align: center;
+			    /* justify-content: unset; */
+				li {	
+					color: $DARK_50;
+					width: 40px;
+					height: 40px;
+					font-family: Montserrat, sans-serif;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 12px;
+					line-height: 15px;
+				}
+				.widget__li.no-current {
+					color: $DARK_25;
+				}
+			}
 		}
 	}
 	.calendar__content.opened {
