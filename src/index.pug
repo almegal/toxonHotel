@@ -1,4 +1,3 @@
-include ./ui_kit/calendar/calendar
 
 html
   head
@@ -9,7 +8,4 @@ html
     link(rel="shortcut icon" href="/public/favicon.ico")
   body  
     .wrapper
-      +calendar({
-        placeHolder: 'click me',
-        modificator: 'button_theme_fill'
-      })
+      include ./ui_cards/searchroom/searchroom

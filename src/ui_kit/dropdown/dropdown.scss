@@ -17,6 +17,7 @@ START DEFAULT DROPDOWN STYLE
   padding: 0;
   //responsive
   width: 100%;
+  position: relative;
   .dropdown__title {
       letter-spacing: 1;
       margin-bottom: 3px;
@@ -54,6 +55,8 @@ START DEFAULT DROPDOWN STYLE
   }
   // when ative - show
   .dropdown__expended.dropdown-active {
+    position: absolute;
+    background: #FFFFFF;
     padding-bottom: 3px;
     //border color and radius
     border: 1px solid rgba(31, 32, 65, 0.5);

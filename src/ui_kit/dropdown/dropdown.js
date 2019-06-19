@@ -1,10 +1,11 @@
-// get all dropdown blocks as htmlcollection
+module.exports = (() => {
+  // get all dropdown blocks as htmlcollection
 const dropdowns = document.getElementsByClassName('dropdown');
 // if not exsist dropdown block
 if (dropdowns.length === 0) {
   // stop script and return
-  return;
-}
+  return
+};
 
 const actionHandler = e => {
   const action = e.target.getAttribute('data-action')
@@ -125,3 +126,4 @@ for (dropdown of dropdowns) {
 }
 // IDEA:
 // Re-write handler like action
+})()

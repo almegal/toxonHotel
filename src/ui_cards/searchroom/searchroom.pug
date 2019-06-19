@@ -1,0 +1,20 @@
+include ../../ui_kit/calendar/calendar
+include ../../ui_kit/dropdown/dropdown
+include ../../ui_kit/button/button
+section(class='searchroom')
+	h1(class='searchroom__title') Найдём номера под ваши пожелания
+	+calendar({})
+	+dropdown({
+	title: 'Гости',
+	placeHolder: 'Сколько гостей',
+	items: [
+	'взрослые',
+	'дети',
+	'младенцы'
+	],
+	btn: true
+	})
+	+button({
+		placeHolder: 'подобрать номер',
+		modificator: 'button_theme_fill'
+	})
