@@ -1,8 +1,8 @@
 @import "./_theme/button_theme";
+@import "./_size/button_size";
+
 .button {
   cursor: pointer;
-  max-width: 99px;
-  height: 44px;
   border-radius: 22px;
   /* Primary Gradient */
   .button__placeholder {
