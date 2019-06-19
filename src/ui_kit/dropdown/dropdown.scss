@@ -26,7 +26,7 @@ START DEFAULT DROPDOWN STYLE
     height: 44px;
     box-sizing: border-box;
     //
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid $DARK_50;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     // make flex
@@ -37,6 +37,7 @@ START DEFAULT DROPDOWN STYLE
     p, span {
       letter-spacing: 0.6px;
       margin: 12px 14px 15px 15px;
+      color: $DARK_75
     }
     // add arrow
     .dropdown__arrow:before {
@@ -59,7 +60,7 @@ START DEFAULT DROPDOWN STYLE
     background: #FFFFFF;
     padding-bottom: 3px;
     //border color and radius
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: 1px solid $DARK_50;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-top: none;
     border-bottom-left-radius: 3px;
@@ -109,7 +110,7 @@ START DEFAULT DROPDOWN STYLE
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin: 15px 0 5px 0;
+      margin: 15px 0 13px 0;
       h3 {
         margin: 0 15px;
         // make cursor
