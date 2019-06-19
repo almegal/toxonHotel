@@ -1,3 +1,4 @@
+module.exports = (() => {
 // get all textfield inpiut as html collection
 const textfields = document.getElementsByClassName('textfield__input');
 // if textfields not in display - return
@@ -35,3 +36,4 @@ for (textfield of textfields) {
   // set event handler
   textfield.onkeydown = onInput;
 }
+})()

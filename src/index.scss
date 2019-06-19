@@ -24,6 +24,7 @@
 /* IMPOR FROM CARDS */
 @import "./ui_cards/searchroom/searchroom";
 @import "./ui_cards/login/login";
+@import "./ui_cards/registration/registration";
 
 /* START BASE CUSTOM */
 html, body {
@@ -75,6 +76,10 @@ p, span, label {
 /* END BASE CUSTOM */
 
 .wrapper {
-  margin-left: 10%;
-  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  // margin-left: 10%;
+  // margin-right: 10%;
 }
