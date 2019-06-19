@@ -1,0 +1,37 @@
+include ../../ui_kit/calendar/calendar
+include ../../ui_kit/dropdown/dropdown
+include ../../ui_kit/button/button
+
+section(class='booking')
+	.booking__header
+		h2 №888 <span class='booking__span'>люкс</span>
+		p <span class='bold'>9 990₽</span> в сутки
+	+calendar({})
+	+dropdown({
+	modificator: 'dropdown_size_m',
+	title: 'Гости',
+	placeHolder: 'Сколько гостей',
+	items: [
+	'взрослые',
+	'дети',
+	'младенцы'
+	],
+	btn: true
+	})
+	.booking__calculate
+		p 9 990₽ х 4 суток
+		p 39 960₽
+	.booking__calculate
+		p Сбор за услуги: скидка 2 179₽
+		p 0₽
+	.booking__calculate
+		p Сбор за дополнительные услуги
+		p 300₽			
+	.booking__total
+		h2 Итого
+		.booking__underline
+		h2 38081	
+	+button({
+		placeHolder: 'забронировать',
+		modificator: 'button_theme_fill button_size_w320h44'
+	})
