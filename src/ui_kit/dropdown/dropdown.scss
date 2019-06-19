@@ -19,7 +19,7 @@ START DEFAULT DROPDOWN STYLE
   width: 100%;
   position: relative;
   .dropdown__title {
-      letter-spacing: 1;
+      letter-spacing: 1px;
       margin-bottom: 3px;
   }
   .dropdown__input {
@@ -35,7 +35,7 @@ START DEFAULT DROPDOWN STYLE
     align-items: center;
     //
     p, span {
-      letter-spacing: 0.6;
+      letter-spacing: 0.6px;
       margin: 12px 14px 15px 15px;
     }
     // add arrow
@@ -74,7 +74,7 @@ START DEFAULT DROPDOWN STYLE
       align-items: center;
       margin: 4px 0;
       .item__title {
-        letter-spacing: 0.6;
+        letter-spacing: 0.6px;
         margin-left: 15px;
       }
       .item__content {
@@ -109,7 +109,7 @@ START DEFAULT DROPDOWN STYLE
       width: 100%;
       display: flex;
       justify-content: space-between;
-      margin: 15px 0 5 0;
+      margin: 15px 0 5px 0;
       h3 {
         margin: 0 15px;
         // make cursor
