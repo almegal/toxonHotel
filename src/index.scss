@@ -8,7 +8,7 @@
   $GREEN: #6FCF97;
 /*END VARIABLES*/
 
-
+/* IMPORT FROM UI_KIT */
 @import "./ui_kit/dropdown/dropdown";
 @import "./ui_kit/checkbutton/checkbutton";
 @import "./ui_kit/ratestar/ratestar";
@@ -21,7 +21,10 @@
 @import "./ui_kit/calendar/calendar";
 //@import "./mixin";
 
+/* IMPOR FROM CARDS */
 @import "./ui_cards/searchroom/searchroom";
+@import "./ui_cards/login/login";
+
 /* START BASE CUSTOM */
 html, body {
   margin: 0;
