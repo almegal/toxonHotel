@@ -24,7 +24,17 @@
     color: $PURPLE;
   }
 }
-.button.button_theme_empty {
+.button.button_theme_emptyGray {
+  height: initial;
+  .button__placeholder {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
+.button.button_theme_emptyPurple {
   height: initial;
   .button__placeholder {
     padding-top: 10px;
@@ -32,8 +42,5 @@
     font-size: 12px;
     text-transform: uppercase;
     color: $PURPLE;
-    &:hover {
-      color: rgba(31, 32, 65, 0.5);
-    }
   }
 }

@@ -1,5 +1,5 @@
 // imports action
-import { arrowAction } from './action/arrowAction.js';
+import { arrowAction, pickAction, leftAction, rightAction } from './action/index.js';
 //  import helpers
 import { addWidget } from './widget/addWidget.js'
 import { initializationStata } from './widget/initializationStata.js'
@@ -15,15 +15,20 @@ const clickHandler = e => {
 	if (!action) return;
 	// by special action
 	// return handler
+	let data;
 	switch (action) {
 	 	case 'arrow': 
 	 		// get calendar__content element 
-	 		const element = e.currentTarget.children[1]
+	 		const element = e.currentTarget.children[1];
 	 		return arrowAction(element); 
 	 	case 'left':
-	 		console.log(action)
-	 		return 	
+	 		return leftAction(e, localStorage);
+		case 'right': 
+	 		return rightAction(e, localStorage);
+	 	case 'pick': 
+	 		return pickAction(e, localStorage);
 	 }
+	return;
 }
 // 
 // initialize state

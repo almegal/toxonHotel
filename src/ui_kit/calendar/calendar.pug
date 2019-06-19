@@ -1,3 +1,4 @@
+include ../button/button
 mixin calendar(options)
 	.calendar
 		.datedropdown
@@ -13,7 +14,10 @@ mixin calendar(options)
 					span(data-action='arrow' class='datedropdown__arrow')
 		.calendar__content
 			.widget__header
-				img(src='public/leftarrow.svg' heigth='24' width='24' class='widget__leftarrow' data-action='left')
+				img(src='public/leftarrow.svg' heigth='20' width='20' class='widget__leftarrow' data-action='left')
 				h2(class='widget__title') 
-				img(src='public/rightarrow.svg' heigth='24' width='24' class='widget__rigtharrow' data-action='right')
+				img(src='public/rightarrow.svg' heigth='20' width='20' class='widget__rigtharrow' data-action='right')
 			.widget__content
+			.widget__button
+				+button({placeHolder: 'очистить', modificator: 'button_theme_emptyGray'})
+				+button({placeHolder: 'применить', modificator: 'button_theme_emptyPurple'})

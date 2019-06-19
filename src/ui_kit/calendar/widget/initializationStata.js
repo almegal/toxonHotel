@@ -1,7 +1,7 @@
 // import 
 import moment from 'moment';
 // get curr date by format 01-June-2019
-const currentDate = moment().format('D-MMMM-YYYY');
+const currentDate = moment().format('YYYY/MM/D');
 // get number of digital
 // return from 0 - 11
 const currentMonth = moment().month();
@@ -11,7 +11,8 @@ const nameWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 const stateToSave = {
 	currentDate,
 	currentMonth,
-	nameWeek
+	nameWeek,
+	rangeDates: []
 };
 // fucnction that will create and save to localStogare data
 // which will use later
