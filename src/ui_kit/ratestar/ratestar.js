@@ -1,3 +1,4 @@
+module.exports = (() => {
 // get all ratestar as html collection
 const ratestarCollections = document.getElementsByClassName('ratestar');
 // if ratestar not in display - return
@@ -38,3 +39,5 @@ for (ratestar of ratestarCollections) {
   // set event handler
   ratestar.onclick = clickHandler;
 }
+
+})()

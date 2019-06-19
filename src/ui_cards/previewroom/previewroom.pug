@@ -1,0 +1,13 @@
+include ../../ui_kit/ratestar/ratestar
+mixin previewroom(options)
+	section(class='previewroom')
+		img(class='previewroom__img', src=options.img)
+		.previewroom__header
+			h2 №888 <span class='purple'>люкс</span>
+			p <span class='bold'>9 990₽</span> в сутки
+		.previewroom__underline
+		.previewroom__footer
+			+ratestar({count: options.count, rating: options.rating})
+			p 
+				span(class='bold')= options.reviews
+				|  Oтзывов

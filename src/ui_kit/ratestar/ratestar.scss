@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   .ratestar__star:after {
+  	font-size: 24px;
     content: '\2606';
     color: $PURPLE;
   }
   .ratestar__star.active:after {
+  	font-size: 24px;
     content: '\2605';
   }
 }

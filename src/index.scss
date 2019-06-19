@@ -26,7 +26,7 @@
 @import "./ui_cards/login/login";
 @import "./ui_cards/registration/registration";
 @import "./ui_cards/booking/booking";
-
+@import "./ui_cards/previewroom/previewroom";
 /* START BASE CUSTOM */
 html, body {
   margin: 0;
@@ -78,9 +78,14 @@ p, span, label {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
   // margin-left: 10%;
   // margin-right: 10%;
+}
+.purple {
+  color: $PURPLE;
+}
+.bold {
+  font-weight: bold;
 }
