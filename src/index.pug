@@ -1,4 +1,4 @@
-include ./ui_cards/previewroom/previewroom
+include ./ui_kit/pagination/pagination
 html
 	head
 		title Tøxin Hotel
@@ -8,3 +8,4 @@ html
 		link(rel="shortcut icon" href="/public/favicon.ico")
 	body
 		.wrapper
+			+pagination({ title: 'pagination', pages:15, totalRoom: 180})

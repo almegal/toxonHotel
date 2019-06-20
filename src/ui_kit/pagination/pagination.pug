@@ -1,0 +1,8 @@
+mixin pagination(options)
+	.pagination
+		h3(class='pagination__title')= options.title
+		div(class='pagination__content'
+			data-pages=options.pages
+			data-totalRoom=options.totalRoom)
+		.pagination__footer
+			p 1 – 12 из 100+ вариантов аренды
