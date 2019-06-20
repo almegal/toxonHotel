@@ -5,3 +5,6 @@ mixin button(options)
   - }
   div(class=className)
     p(class='button__placeholder')= options.placeHolder
+    - if (options.arrow) {
+      img(src='public/arrowWhite.svg', height='24', width='24')
+    - }

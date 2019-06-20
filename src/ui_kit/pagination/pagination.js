@@ -1,6 +1,9 @@
 module.exprots = (() => {
 	// get pagination
 	const pagination = document.getElementsByClassName('pagination')[0];
+	if(!pagination) {
+		return;
+	}
 	// initializate pagination from data-pages attribute
 	const initialization = (element) => {
 		// get count pages from data-pages attribute

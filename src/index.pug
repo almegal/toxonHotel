@@ -1,4 +1,4 @@
-include ./ui_kit/pagination/pagination
+include ./ui_kit/button/button
 html
 	head
 		title Tøxin Hotel
@@ -8,4 +8,5 @@ html
 		link(rel="shortcut icon" href="/public/favicon.ico")
 	body
 		.wrapper
-			+pagination({ title: 'pagination', pages:15, totalRoom: 180})
+			+button({placeHolder: 'Забронировать', modificator: 'button_size_w320h44 button_theme_fill',
+			arrow: true})

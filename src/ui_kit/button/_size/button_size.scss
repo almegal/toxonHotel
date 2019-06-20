@@ -1,8 +1,10 @@
 .button.button_size_w99h44 {
 	  height: 44px;
-	  width: 99px;
+	  width: 100%;
+	  max-width: 99px;
 }
 .button.button_size_w320h44 {
 	  height: 44px;
+	  width: 100%;
 	  max-width: 320px;
 }
