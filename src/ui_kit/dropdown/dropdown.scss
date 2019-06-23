@@ -17,12 +17,14 @@ START DEFAULT DROPDOWN STYLE
   padding: 0;
   //responsive
   width: 100%;
-  position: relative;
   .dropdown__title {
-      letter-spacing: 1px;
+      letter-spacing: 0px;
       margin-bottom: 3px;
   }
   .dropdown__input {
+    .dropdown__placeholder {
+      padding-top: 5px;
+    }
     height: 44px;
     box-sizing: border-box;
     //
@@ -46,7 +48,7 @@ START DEFAULT DROPDOWN STYLE
       // arrow
       content: '\2329';
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 12px;
       transform: rotate(-90deg);
     }
   }
