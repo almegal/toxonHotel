@@ -6,11 +6,14 @@
     -ms-user-select: none;
     user-select: none;
 	// set size
-	width: 320px;
 	//styling dropdown
 	.datedropdown {
 		display: flex;
 		justify-content: space-between;
+		// 
+		.datedropdown__title {
+			padding-bottom: 5px;
+		}
 		// style datedropdown
 		.datedropdown__input {
 			display: flex;
