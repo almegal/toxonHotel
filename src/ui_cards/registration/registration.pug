@@ -3,27 +3,33 @@ include ../../ui_kit/button/button
 include ../../ui_kit/checkbutton/checkbutton
 
 section(class='registration')
-	h1 Регистрация аккаунта
-	+textfield({ placeholder: 'Имя', type: 'text'})
-	+textfield({ placeholder: 'Фамилия', type: 'text'})
-	+checkbutton({
-		modificator: 'checkbutton_type_radio',
-		items: [{title: 'Мужчина'}, {title: 'Женщина'}]
-	})
-	+textfield({ placeholder: 'ДД.ММ.ГГГГ', type: 'text', title: 'дата рождения', mask: 'ДД.ММ.ГГГГ'})
-	+textfield({ placeholder: 'Email', type: 'email', title: 'данные для входа в сервис'})
-	+textfield({ placeholder: 'Password', type: 'password'})
-	+checkbutton({
-		modificator: 'checkbutton_type_toggle',
-		items: [{title: 'Получать спецпредложения'}]
-	})
-	+button({
-		placeHolder: 'Перейти к оплате',
-		modificator: 'button_theme_fill button_size_w320h44'
-	})
-	div(class='registration__footer')
-		p Нет аккаунта на Toxin?
+	h1(class='registration__title') Регистрация аккаунта
+	.registration__textfield
+		+textfield({ placeholder: 'Имя', type: 'text'})
+		+textfield({ placeholder: 'Фамилия', type: 'text'})
+	.registration__checkbutton
+		+checkbutton({
+			modificator: 'checkbutton_type_radio',
+			items: [{title: 'Мужчина'}, {title: 'Женщина'}]
+		})
+	.registration__birthday
+		+textfield({ placeholder: 'ДД.ММ.ГГГГ', type: 'text', title: 'дата рождения', mask: 'ДД.ММ.ГГГГ'})
+	.registration__login
+			+textfield({ placeholder: 'Email', type: 'email', title: 'данные для входа в сервис'})
+			+textfield({ placeholder: 'Пароль', type: 'password'})
+	.registration__toggle
+		+checkbutton({
+			modificator: 'checkbutton_type_toggle',
+			items: [{title: 'Получать спецпредложения'}]
+		})
+	.registration__button
 		+button({
-			placeHolder: 'Создать',
+			placeHolder: 'Перейти к оплате',
+			modificator: 'button_theme_fill button_size_w320h44'
+		})
+	div(class='registration__footer')
+		p Уже есть аккаунт на Toxin
+		+button({
+			placeHolder: 'Войти',
 			modificator: 'button_theme_shape button_size_w99h44'
 		})

@@ -1,4 +1,6 @@
 .registration {
+	// 
+	min-width: 320px;
 	max-width: 380px;
 	height: 646px;
 	background: #FFFFFF;
@@ -9,14 +11,62 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-around;
+	// 
 	padding: 0 30px;
+	// 
+	// position all element in cards
+	// 
+	.registration__title {
+		letter-spacing: 0.7px;
+		position: relative;
+		top: 24px;
+	}
+	// 
+	.registration__textfield {
+		position: relative;
+		top: 26px;
+		.textfield {
+			margin-bottom: 10px;
+		}
+	}
+	.registration__checkbutton {
+		position: relative;
+		top: -12px;
+	}
+	// 
+	.registration__birthday {
+		position: relative;
+		top: -7px;
+	}
+	.registration__login {
+		position: relative;
+		top: -2px;
+		.textfield {
+			margin-bottom: 10px;
+		}
+	}
+	.registration__toggle {
+		position: relative;
+		top: -31px;
+	}
+	.registration__button {
+		position: relative;
+		top: -26px;
+	}
+	// 
 	.registration__footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		p {
+		position: relative;
+		top: -12px;
+		p {	
+			letter-spacing: 0.45px;
 			color: black;
+		}
+		.button {
+			margin-right: 0px;
 		}
 	}
 }
