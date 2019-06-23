@@ -2,9 +2,10 @@
 @import "./_size/button_size";
 
 .button {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   cursor: pointer;
   border-radius: 22px;
   /* Primary Gradient */
