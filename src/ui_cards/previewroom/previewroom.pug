@@ -3,11 +3,14 @@ mixin previewroom(options)
 	section(class='previewroom')
 		img(class='previewroom__img', src=options.img)
 		.previewroom__header
-			h2 №888 <span class='purple'>люкс</span>
-			p <span class='bold'>9 990₽</span> в сутки
+			h2= options.number 
+				span(class='purple') люкс
+			p 
+				span(class='bold') 9 990₽ 
+				|	в сутки
 		.previewroom__underline
 		.previewroom__footer
-			+ratestar({count: options.count, rating: options.rating})
+			+ratestar({count: options.starRate, rating: options.rating})
 			p 
 				span(class='bold')= options.reviews
 				|  Oтзывов
