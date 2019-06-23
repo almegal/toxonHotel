@@ -1,14 +1,16 @@
 include ../../ui_kit/textfield/textfield
 include ../../ui_kit/button/button
 section(class='login')
-	h1 Войти
-	+textfield({ placeholder: 'Email', type: 'email'})
-	+textfield({ placeholder: 'Password', type: 'password'})
+	h1(class='login__title') Войти
+	.login__input
+		+textfield({ placeholder: 'Email', type: 'email'})
+		+textfield({ placeholder: 'Пароль', type: 'password'})
 	+button({
 		placeHolder: 'Войти',
-		modificator: 'button_theme_fill button_size_w320h44'
+		modificator: 'button_theme_fill button_size_w320h44',
+		arrow: true
 	})
-	div(class='login__footer')
+	.login__footer
 		p Нет аккаунта на Toxin?
 		+button({
 			placeHolder: 'Создать',
