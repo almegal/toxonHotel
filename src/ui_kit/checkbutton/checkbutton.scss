@@ -1,6 +1,7 @@
 //import modificators
 @import "./_type/checkbutton_type";
 .checkbutton {
+  width: 100%;
   // make one by one
   .checkbutton__block {
     margin-top: 10px;
@@ -8,8 +9,10 @@
     .checkbutton__container {
       margin-right: 15px;
       margin-top: 10px;
+      padding-right: 4px;
       position: relative;
       .checkbutton__label {
+        letter-spacing: 1px;
         display: block;
         position: relative;
         padding-left: 30px;
