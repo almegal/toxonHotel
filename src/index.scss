@@ -35,6 +35,7 @@ html, body {
   width: 100%;
 }
 body {
+  width: 100%;
   max-width: 1440px;
 }
 
@@ -77,16 +78,16 @@ p, span, label {
 }
 /* END BASE CUSTOM */
 
-.wrapper {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  // margin-left: 10%;
-  // margin-right: 10%;
-}
 .purple {
   color: $PURPLE;
 }
 .bold {
   font-weight: bold;
+}
+
+
+/* STYLE FOR CARDS AT ONE PAGE*/
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
