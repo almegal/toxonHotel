@@ -1,5 +1,5 @@
 .booking {
-	padding: 0 30px;
+	padding: 0 29px;
 	background: #FFFFFF;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
@@ -7,7 +7,7 @@
 	border-radius: 4px;
 	// 
 	// 
-	width: 380px;
+	max-width: 380px;
 	height: 511px;
 	// 
 	// 
@@ -15,23 +15,42 @@
     flex-direction: column;
     justify-content: space-evenly;
 	.booking__header {
+		position: relative;
+		top: 13px;
 		display: flex;
 		justify-content: space-between;
+	}
+	.booking__calendar {
+		position: relative;
+		top: 2px;
+	}
+	.booking__dropdown {
+		position: relative;
+		top: -7px;
 	}
 	.booking__calculate {
 		display: flex;
 		justify-content: space-between;
-	    margin-top: -15px;
+		// position: relative;
+		top: -11px;
+		margin: -10px 0;
 	}
 	.booking__total {
+		position: relative;
+		top: 13px;
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: -10px;
+		// padding-bottom: -10px;
 		align-items: baseline;
 		.booking__underline {
-			width: 100%;
+			margin-right: -3px;
+			width: 60%;
 			border-bottom: 1px dotted $DARK_25; 
 		}
+	}
+	.booking__button {
+		position: relative;
+		top:2px;
 	}
 }

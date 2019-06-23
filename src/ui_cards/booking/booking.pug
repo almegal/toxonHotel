@@ -6,18 +6,20 @@ section(class='booking')
 	.booking__header
 		h2 №888 <span class='purple'>люкс</span>
 		p <span class='bold'>9 990₽</span> в сутки
-	+calendar({})
-	+dropdown({
-	modificator: 'dropdown_size_m',
-	title: 'Гости',
-	placeHolder: 'Сколько гостей',
-	items: [
-	'взрослые',
-	'дети',
-	'младенцы'
-	],
-	btn: true
-	})
+	.booking__calendar
+		+calendar({})
+	.booking__dropdown
+		+dropdown({
+			modificator: 'dropdown_size_m',
+			title: 'Гости',
+			placeHolder: 'Сколько гостей',
+			items: [
+			'взрослые',
+			'дети',
+			'младенцы'
+			],
+			btn: true
+		})
 	.booking__calculate
 		p 9 990₽ х 4 суток
 		p 39 960₽
@@ -30,8 +32,9 @@ section(class='booking')
 	.booking__total
 		h2 Итого
 		.booking__underline
-		h2 38081	
-	+button({
-		placeHolder: 'забронировать',
-		modificator: 'button_theme_fill button_size_w320h44'
-	})
+		h2 38 081₽	
+	.booking__button 
+		+button({
+			placeHolder: 'забронировать',
+			modificator: 'button_theme_fill button_size_w320h44'
+		})
