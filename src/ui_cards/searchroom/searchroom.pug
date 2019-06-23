@@ -3,19 +3,19 @@ include ../../ui_kit/dropdown/dropdown
 include ../../ui_kit/button/button
 section(class='searchroom')
 	h1(class='searchroom__title') Найдём номера под ваши пожелания
-	+calendar({})
-	+dropdown({
-	modificator: 'dropdown_size_m',
-	title: 'Гости',
-	placeHolder: 'Сколько гостей',
-	items: [
-	'взрослые',
-	'дети',
-	'младенцы'
-	],
-	btn: true
-	})
-	+button({
-		placeHolder: 'подобрать номер',
-		modificator: 'button_theme_fill button_size_w320h44'
-	})
+	.searchroom__calendar
+		+calendar({})
+	.searchroom__dropdown
+		+dropdown({
+		modificator: 'dropdown_size_m',
+		title: 'Гости',
+		placeHolder: 'Сколько гостей',
+		items: ['взрослые', 'дети', 'младенцы'],
+		btn: true
+		})
+	.searchroom__button
+		+button({
+			placeHolder: 'подобрать номер',
+			modificator: 'button_theme_fill button_size_w320h44',
+			arrow: true
+		})
