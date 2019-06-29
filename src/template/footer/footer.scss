@@ -1,0 +1,124 @@
+.footer {
+	width: 100%;
+    position: relative;
+    bottom: 0px;
+    .footer__content {
+    	height: 372px;
+	    background: #FFFFFF;
+		box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+		border: 2px solid $DARK_25;
+		border-left: none;
+		border-right: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+		padding: 0 50px;
+		.footer__row {
+			padding-top: 100px;
+			p {
+				padding: 5px 0;
+				cursor: pointer;
+			}
+			.active {
+				cursor: initial;
+				font-weight: bold;
+				color: $DARK_75;
+			}
+		}
+		.footer__header {
+			padding-top: 100px;
+			width: 30%;
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			// padding-left: 75px;
+			.footer__logo {
+				display: flex;
+				align-items: center;
+				h2 {
+					margin-left: 10px;
+				}
+			}
+			.footer__description {
+				width: 100%;
+			}
+		}
+    }
+	.copyright {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 70px;
+		background: #FFFFFF;
+		box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+		padding: 0 50px;
+		.copyright__text {
+			// margin-left: 45px;
+			p {
+				color: $DARK_75;
+			}
+		}
+		.copyright__social {
+			// margin-right: 45px;
+			img {
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and  (max-width: 906px) {
+	.footer {
+		height: 100%;
+			.footer__content {
+		padding: 0 25px;
+		}
+	}
+}
+
+@media screen and  (max-width: 772px) {
+	.footer {
+		.footer__content {
+			height: 100%;
+			padding: 20px 40px;
+			flex-wrap: wrap;
+			.footer__row {
+				text-align: center;
+				padding: 10px 0;
+				width: 50%;
+				flex-grow: 1;
+			}
+			.footer__header {
+				padding-top: 20px;
+				order: 5;
+				width: 100%;
+				.footer__description {
+				    width: 70%;
+				    padding-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and  (max-width: 535px) {
+	.footer {
+		.footer__content {
+			.footer__header {
+				text-align: center;
+				.footer__logo {
+					display: none;
+				}
+				.footer__description {
+					width: 100%;
+				}
+			}
+		}
+		.copyright {
+			padding: 13px 0;
+			flex-direction: column-reverse;
+		}
+	}
+}
