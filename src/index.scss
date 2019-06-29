@@ -22,12 +22,17 @@
 @import "./ui_kit/pagination/pagination";
 //@import "./mixin";
 
-/* IMPOR FROM CARDS */
+/* IMPORT FROM CARDS */
 @import "./ui_cards/searchroom/searchroom";
 @import "./ui_cards/login/login";
 @import "./ui_cards/registration/registration";
 @import "./ui_cards/booking/booking";
 @import "./ui_cards/previewroom/previewroom";
+
+/* IMPOR FROM TEMPLATE */
+@import "./template/header/header";
+@import "./template/footer/footer";
+
 /* START BASE CUSTOM */
 html, body {
   margin: 0;
@@ -85,9 +90,6 @@ p, span, label {
   font-weight: bold;
 }
 
-
 /* STYLE FOR CARDS AT ONE PAGE*/
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
 }
