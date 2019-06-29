@@ -1,0 +1,114 @@
+.header {
+	height: 70px;
+	background: #FFFFFF;
+	box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0 50px;
+	// 
+	.header__left {
+		width: 15%;
+		display: flex;
+		margin-right: 10px;
+		align-items: center;
+		.header__title {
+			margin-left: 10px;
+		}
+	}
+	.header__toggle {
+		display: none;
+		img {
+			cursor: pointer;
+		}
+	}
+	.header__right {
+		width: 85%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		// 
+		// 
+		.header__item {
+			cursor: pointer;
+			margin-right: 2%;
+			a {
+				display: block;
+			}
+		}
+		.header__item:hover {
+			// font-weight: bold;
+			a {
+				color: $DARK_75;
+			}
+		}
+		.header__item.active {
+		a {
+			font-weight: bold;
+			color: $DARK_75;
+		}
+	}
+		// 
+		// 
+		.button {
+			margin-left: 2%;
+		}
+	}
+	.header__underline {
+		height: 30px;
+		width: 1px;
+		margin-right: 10px;
+		border-left: 1px solid rgba(31, 32, 65, 0.1);
+	}
+	/*mediaa queries*/
+}
+@media screen and  (max-width: 906px) {
+	.header {
+		padding: 0 25px;
+	}
+}
+
+@media screen and  (max-width: 772px) {
+	.header {	
+		padding: 0 40px;
+		justify-content: initial;
+		.header__left {
+		    width: 20%;
+    		.header__title {
+				margin-left: 10px;
+			}
+		}
+		.header__toggle {
+			z-index: 1;
+		    width: 100%;
+		    display: flex;
+		    justify-content: flex-end;
+	       	.rotate {
+	       		transform: rotate(45deg);
+	       	}
+		}
+		.header__right {
+			.header__underline {
+				display: none;
+			}
+		    display: none;
+		    flex-direction: column-reverse;
+		    justify-content: center;
+		    width: 100%;
+		    background: #FFFFFF;
+		    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+		    position: absolute;
+		    top: 70px;
+		    right: 0px;
+		    padding-top: 20px;
+			.header__item, .button, .header__username {
+				margin-bottom: 25px;
+			}
+		}
+		.header__right.opened {
+			z-index: 1;
+			display: flex;
+		}
+	}
+}

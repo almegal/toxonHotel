@@ -1,0 +1,27 @@
+include ../../ui_kit/button/button
+section(class='header')
+	.header__left
+		img(class='header__logo', src='public/logo.svg')
+		h2(class='header__title') TØXIN
+	.header__toggle
+		img(data-action='toggle' src='public/toggle.svg' height='50' width='50')
+	.header__right
+		p(class='header__item', data-action='item')
+			a Home
+		p(class='header__item', data-action='item')
+			a About Us
+		p(class='header__item', data-action='item')
+			a Services
+		p(class='header__item', data-action='item')
+			a Careers
+		p(class='header__item', data-action='item')
+			a News
+		p(class='header__item', data-action='item')
+			a Documentation
+		- if(false) {
+			.header__underline
+			p(class='header__username') Aleksei Peikhel
+		-} else {
+			+button({placeHolder: 'login', modificator: 'button_size_w79h34 button_theme_shape'})
+			+button({placeHolder: 'register', modificator: 'button_size_w101h34 button_theme_fill'})
+		-}
