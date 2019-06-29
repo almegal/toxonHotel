@@ -4,6 +4,7 @@
     opacity: 0.5;
   }
   .button__placeholder {
+    height: initial;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -11,12 +12,12 @@
   }
 }
 .button.button_theme_shape {
-  max-width: 99px;
   border: 2px solid $PURPLE;
   &:hover {
     border: 2px solid rgba(145, 162, 249, 0.5);
   }
   .button__placeholder {
+    height: initial;
     text-align: center;
     font-size: 12px;
     text-transform: uppercase;
@@ -26,18 +27,20 @@
 .button.button_theme_emptyGray {
   height: initial;
   .button__placeholder {
+    height: initial;
     text-align: center;
     font-size: 12px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
   }
 }
 .button.button_theme_emptyPurple {
   height: initial;
   .button__placeholder {
+    height: initial;
     text-align: center;
     font-size: 12px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     color: $PURPLE;
   }
 }
