@@ -1,8 +1,9 @@
+include ../../../ui_kit/textfield/textfield
 section(class='footer')
 	.footer__content
 		.footer__header
 			.footer__logo
-				img(class='footer__logo', src='public/logo.svg')
+				img(class='footer__logo', src=require('./../../public/logo.svg'))
 				h2(class='footer__title') TØXIN
 			.footer__description
 				p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
@@ -25,13 +26,15 @@ section(class='footer')
 			P Get in Touch
 		.footer__row
 			p(class='active') Support
-			P Documentation
-			P Community
-			P Get in Touch			
+			P Receive our latest news and promotions in your inbox!
+			+textfield({type: 'Email', placeholder: 'Email', arrow: true})
 	.copyright
 		.copyright__text
 			p Copyright © 2018 Toxin UI Kit. All rights reserved.
 		.copyright__social
-			img(src='public/twitter.svg')
-			img(src='public/facebook.svg')
-			img(src='public/instagram.svg')
+			a(href='https://twitter.com/?lang=ru')
+				img(src=require('./../../public/twitter.svg'))
+			a(href='https://facebook.com/?lang=ru')
+				img(src=require('./../../public/facebook.svg'))
+			a(href='https://instagram.com/?lang=ru')
+				img(src=require('./../../public/instagram.svg'))

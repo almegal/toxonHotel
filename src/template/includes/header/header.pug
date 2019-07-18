@@ -1,0 +1,25 @@
+include ../../../ui_kit/button/button
+section(class='header')
+	.header__left
+		img(class='header__logo', src=require('./../../public/logo.svg'))
+		h2(class='header__title') TØXIN
+	.header__toggle
+		img(data-action='toggle' src=require('./../../public/toggle.svg') height='50' width='50')
+	.header__right
+		p(class='header__item', data-action='item')
+			a О нас
+		p(class='header__item', data-action='item')
+			a Услуги
+		p(class='header__item', data-action='item')
+			a(href='./registration.html') Вакансии
+		p(class='header__item', data-action='item')
+			a Новости
+		p(class='header__item', data-action='item')
+			a Соглашения
+		- if(false) {
+			.header__underline
+			p(class='header__username') Aleksei Peikhel
+		-} else {
+			+button({placeHolder: 'войти', modificator: 'button_size_w87h34 button_theme_shape'})
+			+button({placeHolder: 'зарегистрироваться', modificator: 'button_size_w196h34 button_theme_fill'})
+		-}
