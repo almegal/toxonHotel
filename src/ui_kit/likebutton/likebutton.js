@@ -1,4 +1,5 @@
-// get all dropdown blocks as htmlcollection
+exports.module = (() => {
+  // get all dropdown blocks as htmlcollection
 const likebuttons = document.getElementsByClassName('likebutton__label');
 // if not exsist dropdown block
 if (likebuttons.length === 0) {
@@ -22,3 +23,5 @@ const likebuttonHandler = e => {
 for (likebutton of likebuttons) {
   likebutton.onchange = likebuttonHandler;
 }
+
+})()

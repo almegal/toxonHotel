@@ -1,4 +1,5 @@
-// get all expendcheckbox blocks as htmlcollection
+exports.module = (() => {
+  // get all expendcheckbox blocks as htmlcollection
 const expendedcheckbox = document.getElementsByClassName('expendcheckbox');
 // if not exsist dropdown block
 if (expendedcheckbox.length === 0) {
@@ -32,3 +33,5 @@ const arrowAction = e => {
 for (expendedcheck of expendedcheckbox) {
   expendedcheck.onclick = arrowAction
 }
+
+})()
