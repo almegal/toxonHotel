@@ -7,8 +7,10 @@ import './src/ui_kit/textfield/textfield.js'
 import './src/ui_kit/likebutton/likebutton.js'
 import './src/ui_kit/calendar/calendar.js'
 import './src/ui_kit/pagination/pagination.js'
-//  import js file from template
+//  import js file for includes
 import './src/template/includes/header/header.js'
+
+
 const authorize = {
 	login: true,
 	user: 'Test'

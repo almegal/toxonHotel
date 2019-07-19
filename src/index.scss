@@ -30,8 +30,8 @@
 @import "./ui_cards/previewroom/previewroom";
 
 /* IMPOR FROM TEMPLATE */
-@import "./template/header/header";
-@import "./template/footer/footer";
+@import "./template/includes/header/header";
+@import "./template/includes/footer/footer";
 
 /* START BASE CUSTOM */
 html, body {
@@ -40,6 +40,7 @@ html, body {
   width: 100%;
 }
 body {
+  margin: auto;
   width: 100%;
   max-width: 1440px;
 }
@@ -72,7 +73,7 @@ h1, h2, h3 {
   padding: 0;
   color: $DARK_100;
 }
-p, span, label {
+p, span, label, a {
   margin: 0;
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -92,4 +93,21 @@ p, span, label {
 
 /* STYLE FOR CARDS AT ONE PAGE*/
 .wrapper {
+  width: 100%;
+  margin: auto;
+  .login {
+    margin: auto;
+  }
+  .registration {
+      margin: auto;
+  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('public/registrationBG.jpg');
+}
+.wrapper-login {
+    padding: 163px 0;
+}
+.wrapper-registration {
+    padding: 30px 0;
 }
