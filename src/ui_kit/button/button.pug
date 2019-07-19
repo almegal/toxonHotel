@@ -1,10 +1,15 @@
 mixin button(options)
+  - let href = options.href || false
   - let className = 'button '
   - if (options.modificator) {
   -   className = className + options.modificator
   - }
   div(class=className)
-    p(class='button__placeholder')= options.placeHolder
+    - if(href) {
+        a(class='button__placeholder' href=href rel="no-refresh")= options.placeHolder
+    - } else {
+        a(class='button__placeholder')= options.placeHolder
+    - }
     - if (options.arrow) {
-      img(src='public/arrowWhite.svg', height='24', width='24')
+      img(src=require('./../../public/arrowWhite.svg'), height='24', width='24')
     - }
