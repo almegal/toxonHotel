@@ -58,6 +58,8 @@ START DEFAULT DROPDOWN STYLE
   }
   // when ative - show
   .dropdown__expended.dropdown-active {
+    width: inherit;
+    box-sizing: border-box;
     position: absolute;
     background: #FFFFFF;
     padding-bottom: 3px;
