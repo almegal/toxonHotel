@@ -17,15 +17,16 @@
     	position: relative;
     	top: 22px;
     }
-    & > .calendar {
-    	top: 7px;
+    .searchroom__calendar {
+        position: relative;
+        top: 6px;
     }
-    & > .dropdown {
-    	position: relative;
-    	top: -8px;
+    .searchroom__dropdown {
+        position: relative;
+        top: -8px;
     }
     .searchroom__button {
         position: relative;
-        top: -11px;
+        top: -12px;
     }
 }

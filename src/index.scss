@@ -108,6 +108,49 @@ p, span, label, a {
 .wrapper-login {
     padding: 163px 0;
 }
+// 
 .wrapper-registration {
     padding: 30px 0;
+}
+// 
+.wrapper-main {
+  //  set height for bg img
+  height: 852px;
+  // align centr contennt
+  margin: auto;
+  // bg img
+  background-size: container;
+  background-repeat: no-repeat;
+  background-image: url('public/main.jpg');
+  background-position-y: -71px; 
+  // 
+  width: 100%;
+  // negative margin, up delete space
+  margin-bottom: -20px;
+  // text on bg img
+  .wrapper__description {
+    text-align: right;
+    position: absolute;
+    top: 830px;
+    right: 400px;
+    width: 280px;
+  }
+  // content
+  .searchroom {
+   position: relative;
+   top: 70px;
+   left: 140px;
+  }
+}
+// 
+// media
+@media screen and  (max-width: 773px) {
+  .wrapper-main {
+    .searchroom {
+      position: relative;
+      top: 120px;
+      left: 0px;
+      margin: 0 auto 0 auto;
+    }
+  }
 }

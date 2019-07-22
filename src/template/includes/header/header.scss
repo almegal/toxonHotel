@@ -101,7 +101,7 @@
 		    background: #FFFFFF;
 		    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 		    position: absolute;
-		    top: 70px;
+		    top: 68px;
 		    right: 0px;
 		    padding-top: 20px;
 			.header__item, .button, .header__username {
@@ -109,7 +109,7 @@
 			}
 		}
 		.header__right.opened {
-			z-index: 1;
+			z-index: 3;
 			display: flex;
 		}
 	}

@@ -4,6 +4,7 @@
 START DEFAULT DROPDOWN STYLE
 */
 .dropdown {
+  position: relative;
   // disabled selection text
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -58,8 +59,7 @@ START DEFAULT DROPDOWN STYLE
   }
   // when ative - show
   .dropdown__expended.dropdown-active {
-    width: inherit;
-    box-sizing: border-box;
+    z-index: 1;
     position: absolute;
     background: #FFFFFF;
     padding-bottom: 3px;

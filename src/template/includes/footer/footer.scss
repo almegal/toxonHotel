@@ -1,32 +1,25 @@
 .footer {
     position: relative;
     bottom: 3px;
+    // 
     .footer__content {
+    	// boundary
     	padding: 0 140px;
-    	height: 372px;
+    	height: 370px;
+    	// color, shadow and border
 	    background: #FFFFFF;
 		box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 		border: 2px solid $DARK_25;
 		border-left: none;
 		border-right: none;
+		// make flex container
 		display: flex;
 		justify-content: space-between;
 		align-items: end;
-		.footer__row {
-			padding:100px 10px 0px 10px;
-			p {
-				padding: 5px 0;
-				cursor: pointer;
-			}
-			.active {
-				cursor: initial;
-				font-weight: bold;
-				color: $DARK_75;
-			}
-		}
+		// 
 		.footer__header {
 			padding-top: 100px;
-			width: 30%;
+			width: 25%;
 			align-items: center;
 			display: flex;
 			flex-wrap: wrap;
@@ -40,8 +33,29 @@
 				}
 			}
 			.footer__description {
-				margin-top: 20px;
+				margin-top: 16px;
 				width: 100%;
+			}
+		}
+		.footer__right {
+			width: 69%;
+			display: flex;
+			.footer__row {
+				margin-left: -59px;
+				flex: 3;
+				padding-top: 104px;
+				p {
+					padding-top: 15px;
+				}
+				.active {
+					cursor: initial;
+					font-weight: bold;
+					color: $DARK_75;
+				}
+				.textfield {
+					position: relative;
+					top: 24px;
+				}
 			}
 		}
     }
@@ -70,6 +84,18 @@
 
 
 
+@media screen and  (max-width: 1225px) {
+	.footer {
+	    .footer__content {
+	    		.footer__right {
+	    			.footer__row {
+	    				margin: 0;
+	    			}
+	    		}
+	    	}		
+		}
+	}
+
 @media screen and  (max-width: 906px) {
 	.footer {
 		height: 100%;
@@ -82,14 +108,16 @@
 @media screen and  (max-width: 772px) {
 	.footer {
 		.footer__content {
+			margin: auto;
 			height: 100%;
 			padding: 20px 40px;
 			flex-wrap: wrap;
-			.footer__row {
-				text-align: center;
-				padding: 10px 0;
-				width: 50%;
-				flex-grow: 1;
+			.footer__right {
+				width: 100%;
+				.footer__row {
+					padding: 10px 0;
+					flex-grow: 1;
+				}
 			}
 			.footer__header {
 				padding-top: 20px;
@@ -107,6 +135,9 @@
 @media screen and  (max-width: 535px) {
 	.footer {
 		.footer__content {
+			.footer__right {
+				flex-wrap: wrap;
+			}
 			.footer__header {
 				text-align: center;
 				.footer__logo {

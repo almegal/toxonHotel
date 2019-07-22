@@ -81,7 +81,8 @@ const config = {
 const devConfig = {
     devServer: {
     port: 3000,
-    contentBase: path.join(__dirname, 'src/')
+    contentBase: path.join(__dirname, 'src/'),
+    historyApiFallback: true
   },
   plugins : [
     new HtmlWebpackPlugin({
@@ -112,6 +113,10 @@ const prodConfig = {
       new HtmlWebpackPlugin({
         template: './src/template/views/registration.pug',
         filename: 'registration.html'
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/template/views/index.pug',
+        filename: 'index.html'
       }),
   ]
 }
