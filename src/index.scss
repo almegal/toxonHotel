@@ -145,10 +145,26 @@ p, span, label, a {
 }
 .wrapper-room {
   .room {
+    .room__image {
+      display: flex;
+      .image__main {
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+      .image__additional {
+        display: flex;
+        flex-wrap: wrap;
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+    }
     .room__content {
       padding: 70px 140px;
       display: flex;
-      
       .room__left {
         width: 65%;
         .room__details {
