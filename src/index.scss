@@ -166,7 +166,7 @@ p, span, label, a {
       padding: 70px 140px;
       display: flex;
       .room__left {
-        width: 65%;
+        width: 60%;
         .room__details {
           display: flex;
           width: 40%;
@@ -177,7 +177,7 @@ p, span, label, a {
         }
       }
       .room__right {
-        width: 35%;
+        width: 40%;
         display: flex;
         justify-content: flex-end;
       }
