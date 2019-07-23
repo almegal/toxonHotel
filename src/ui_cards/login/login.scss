@@ -47,3 +47,12 @@
 		}
 	}
 }
+
+// 
+// При разрешение 375 и меньше добавить прозрачность цвета фону
+
+@media screen and  (max-width: 376px) {
+	.login {
+		background: #ffffff40;
+	}
+}
