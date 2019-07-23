@@ -37,3 +37,8 @@ for (let calendar of calendars) {
 	addWidget(calendar, data);
 	calendar.onclick = clickHandler;
 };
+// 
+// 
+// Исправить проблему выхода за границы при ширине 320px
+// Смещаются даты при 320px
+// 
