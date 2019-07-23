@@ -86,7 +86,7 @@ const devConfig = {
   },
   plugins : [
     new HtmlWebpackPlugin({
-    template: './src/template/views/room.pug',
+    template: './src/template/views/filter.pug',
     }),
       new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
