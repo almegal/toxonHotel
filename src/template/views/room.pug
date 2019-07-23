@@ -1,0 +1,26 @@
+extends ../layout.pug
+
+include ../../ui_kit/descriptionblock/descriptionblock
+include ../../ui_kit/bulletlist/bulletlist
+
+block content
+	.wrapper.wrapper-room
+		.room
+			.room__image
+			.room__content
+				.room__left
+					.room__details
+						+descriptionblock({title: 'Сведение о номере', items: [
+						{title: 'Комфорт', img: '/public/smille.svg', content: 'Шумопоглащающие стены'},
+						{title: 'Удобство', img: '/public/comfort.svg', content: 'Окно в каждой из спален'},
+						{title: 'Уют', img: '/public/fire.svg', content: 'Номер оснащён камином'}
+						], line: true})
+					+descriptionblock({title: 'Отзывы посетителей', items: [
+					{title: 'Мурад Сарафанов', img: '/public/review1.png', content: '5 дней назад', subcontent: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', likeCount: 24},
+					{title: 'Патрисия стеклышкова', img: '/public/review2.png', content: 'Неделю назад', subcontent: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', likeCount: 2},
+					]})
+					.room__rules
+						+bulletlist({title: 'Правила', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00',]})
+						+bulletlist({title: 'Отмена', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00',]})
+				.room__right
+					include ../../ui_cards/booking/booking

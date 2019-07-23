@@ -101,15 +101,16 @@ p, span, label, a {
   .registration {
       margin: auto;
   }
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('public/registrationBG.jpg');
 }
 .wrapper-login {
+    background-repeat: no-repeat;
+  background-image: url('public/registrationBG.jpg');
     padding: 163px 0;
 }
 // 
 .wrapper-registration {
+    background-repeat: no-repeat;
+  background-image: url('public/registrationBG.jpg');
     padding: 30px 0;
 }
 // 
@@ -140,6 +141,31 @@ p, span, label, a {
    position: relative;
    top: 70px;
    left: 140px;
+  }
+}
+.wrapper-room {
+  .room {
+    .room__content {
+      padding: 70px 140px;
+      display: flex;
+      
+      .room__left {
+        width: 65%;
+        .room__details {
+          display: flex;
+          width: 40%;
+        }
+        .room__rules {
+          padding-top: 30px;
+          display: flex;
+        }
+      }
+      .room__right {
+        width: 35%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
 }
 // 
