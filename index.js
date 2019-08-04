@@ -9,7 +9,8 @@ import './src/ui_kit/calendar/calendar.js'
 import './src/ui_kit/pagination/pagination.js'
 //  import js file for includes
 import './src/template/includes/header/header.js'
-
+// import js for views
+import './src/template/views/filter/filter.js'
 
 const authorize = {
 	login: true,

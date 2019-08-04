@@ -83,19 +83,7 @@ const devConfig = {
     port: 3000,
     contentBase: path.join(__dirname, 'src/'),
     historyApiFallback: true
-  },
-  plugins : [
-    new HtmlWebpackPlugin({
-    template: './src/template/views/filter.pug',
-    }),
-      new MiniCssExtractPlugin({
-    // Options similar to the same options in webpackOptions.output
-    // both options are optional
-    filename: './style.css',
-    chunkFilename: '[id].css',
-    // inject: false
-  }),
-  ]
+  }
 }
 const prodConfig = {
     plugins : [
@@ -118,15 +106,32 @@ const prodConfig = {
         template: './src/template/views/index.pug',
         filename: 'index.html'
       }),
+      new HtmlWebpackPlugin({
+        template: './src/template/views/filter.pug',
+        filename: 'filter.html'
+      }),
   ]
 }
 // 
 // 
 module.exports = (env, argv) => {
   if (argv.mode === 'development') {
+      const plugins = { plugins : [
+          new HtmlWebpackPlugin({
+          template: `./src/template/views/${argv.views}/${argv.views}.pug`,
+          }),
+            new MiniCssExtractPlugin({
+          // Options similar to the same options in webpackOptions.output
+          // both options are optional
+          filename: './style.css',
+          chunkFilename: '[id].css',
+          // inject: false
+        }),
+        ]}
     return {
       ...config,
       ...devConfig,
+      ...plugins,
       mode: 'development',
       devtool: 'inline-source-map',
     }
