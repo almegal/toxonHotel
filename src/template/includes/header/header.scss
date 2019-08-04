@@ -65,18 +65,30 @@
 	}
 	/*mediaa queries*/
 }
-@media screen and  (max-width: 906px) {
+
+@media screen and  (max-width: 1439px) {
 	.header {
 		padding: 0 25px;
 	}
 }
 
-@media screen and  (max-width: 772px) {
+@media screen and  (max-width: 936px) {
+	.header {
+		.header__left {
+			display: none;
+		}
+		.header__right {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and  (max-width: 900px) {
 	.header {	
-		padding: 0 40px;
 		justify-content: initial;
 		.header__left {
-		    width: 20%;
+			display: flex;
+		    width: 40%;
     		.header__title {
 				margin-left: 10px;
 			}

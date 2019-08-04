@@ -1,0 +1,107 @@
+.wrapper-filter {
+  .filter__content {
+    padding:30px 140px 170px 140px;
+    display: flex;
+    .filter__icon {
+    	display: none;
+    }
+    .filter__left {
+      width: 25%;
+      padding-right: 30px;
+      & > div {
+        padding-bottom: 25px;
+      }
+    }
+    .filter__right {
+      padding-left: 2px;
+      width: 75%;
+      h1 {
+        margin-left: 10px;
+        margin-bottom: 19px;
+      }
+      .filter__rooms {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        .previewroom {
+          margin-bottom: 20px;
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and  (max-width: 1439px) {
+  .wrapper-filter {
+     .filter__content {
+      padding:30px 40px 170px 40px;
+      .filter__right {
+        h1 {
+          text-align: center;
+        }
+      }
+     }
+  }
+}
+
+@media screen and  (max-width: 1240px) {
+  .wrapper-filter {
+     .filter__content {
+      .filter__right {
+        .filter__rooms {
+          justify-content: space-evenly;
+        }
+      }
+     }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .wrapper-filter {
+     .filter__content {
+      padding:30px 10px 170px 10px;
+      .filter__icon {
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	cursor: pointer;
+      	position: fixed;
+      	left: 4px;
+      }
+      .filter__left {
+      	padding-right: 10px;
+        width: 296px;
+        left: -296px;
+        position: absolute;
+
+      }
+      .filter__right {
+        width: 100%;
+        h1 {
+          display: none;
+        }
+        .filter__rooms {
+          .previewroom {
+            margin-left: 12px;
+            margin-right: 12px;
+          }
+        }
+      }
+     }
+     .filter__content.opened {
+      overflow-x: hidden;
+     	.filter__icon {
+ 		    left: 280px;
+		    z-index: 1;
+     	}
+     	.filter__left {
+     		left: initial;
+     	}
+     	.filter__right {
+     		margin-left: 296px;
+     	}
+     }
+  }
+}

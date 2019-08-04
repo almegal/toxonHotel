@@ -29,9 +29,12 @@
 @import "./ui_cards/booking/booking";
 @import "./ui_cards/previewroom/previewroom";
 
-/* IMPOR FROM TEMPLATE */
+/* IMPORT FROM TEMPLATE */
 @import "./template/includes/header/header";
 @import "./template/includes/footer/footer";
+/* IMPORT FROM VIEWS */
+@import "./template/views/filter/filter";
+
 
 /* START BASE CUSTOM */
 html, body {
@@ -40,9 +43,10 @@ html, body {
   width: 100%;
 }
 body {
+  overflow-x: hidden;
   margin: auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1920px;
 }
 
 h1 {
@@ -103,13 +107,17 @@ p, span, label, a {
   }
 }
 .wrapper-login {
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -70px;
   background-image: url('public/registrationBG.jpg');
-    padding: 163px 0;
+  padding: 163px 0;
 }
 // 
 .wrapper-registration {
     background-repeat: no-repeat;
+    background-size: cover;
+  background-repeat: no-repeat;
   background-image: url('public/registrationBG.jpg');
     padding: 30px 0;
 }
@@ -120,6 +128,7 @@ p, span, label, a {
   // align centr contennt
   margin: auto;
   // bg img
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url('public/main.jpg');
   background-position-y: -71px; 
@@ -183,17 +192,43 @@ p, span, label, a {
     }
   }
 }
+
 // 
 // media
-@media screen and  (max-width: 773px) {
-  .wrapper-main {
-    .searchroom {
-      position: relative;
-      top: 120px;
-      left: 0px;
-      margin: 0 auto 0 auto;
-    }
-  }
-}
+// @media screen and  (max-width: 773px) {
+//   .wrapper-main {
+//     .searchroom {
+//       position: relative;
+//       top: 120px;
+//       left: 0px;
+//       margin: 0 auto 0 auto;
+//     }
+//   }
+// }
+
 // 
-// При разрешение 375 и меньше добавить прозрачность цвета фону
+// @media screen and  (max-width: 1439px) {
+//   .wrapper-main {
+//      background-position-y: 0px;
+//   }
+// }
+
+// 
+// @media screen and  (max-width: 1150px) {
+//   .wrapper-filter {
+//      .filter__content {
+//       padding: 30px 25px 170px 25px;
+//      }
+//   }
+// }
+
+// 
+@media screen and  (max-width: 1439px) {
+
+}
+@media screen and  (max-width: 1240px) {
+
+}
+
+@media screen and  (max-width: 900px) {
+}

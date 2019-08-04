@@ -1,0 +1,165 @@
+extends ../../layout.pug
+
+include ../../../ui_kit/checkbutton/checkbutton
+include ../../../ui_kit/expendcheckbox/expendcheckbox
+include ../../../ui_kit/dropdown/dropdown
+
+include ../../../ui_cards/previewroom/previewroom
+
+block content
+	.wrapper.wrapper-filter
+		.filter__content
+			.filter__icon
+				img(data-action='filter' width=24 height=24 src=require('./../../../public/filter.svg'))
+			.filter__left
+				+dropdown({
+					title: 'даты пребывания в отеле',
+					placeHolder: '19 авг - 23 авг',
+					items: ['взрослые', 'дети', 'младенцы'],
+					btn: true,
+					modificator: 'dropdown_size_s'})
+				+dropdown({
+					title: 'Гости',
+					placeHolder: 'Сколько гостей',
+					items: ['взрослые', 'дети', 'младенцы'],
+					btn: true,
+					modificator: 'dropdown_size_s'})
+
+				+checkbutton({
+					title: 'Checkbox Buttons',
+					items: [
+						{content: 'Можно курить'},
+						{content:'Можно с питомцами'},
+						{content: 'Можно пригласить гостей (до 10 человек)'}], 
+					modificator: 'checkbutton_type_box checkbutton_size_s'})
+
+				+checkbutton({
+					title: 'Доступность',
+					items: [
+						{title: 'Широкий коридор', content: 'Ширина коридоров в номере не менее 91 см.'},
+						{title: 'Помощник для инвалидов', content:'На 1 этаже вас встретит специалист  и проводит до номера.'}],
+					modificator: 'checkbutton_type_box checkbutton_size_s'})
+
+				+dropdown({
+					title: 'Удобства номера',
+					placeHolder: '2 спальни, 2 кровати',
+					items: ['спальни', 'кровати', 'ванны комнаты'],
+					modificator: 'dropdown_size_s'})
+
+				+expendcheckbox({
+					title: 'дополнительные удобства',
+					modificator: 'expendcheckbox_size_s',
+					checkbutton: {
+						modificator: 'checkbutton_type_box',
+						items: [
+						{content: 'Завтрак'},
+						{content: 'Письменный стол'},
+						{content: 'Стул для кормления'},
+						{content: 'Кроватка'},
+						{content: 'Телевизор'},
+						{content: 'Шампунь'},
+						{content: 'Телевизор'},
+						{content: 'Шампунь'},
+						]}
+					})
+			.filter__right
+				h1 Номера, которые мы для вас подобрали
+				.filter__rooms
+					+previewroom({
+						img: '/public/room_image/room1.jpg',
+						number: '№412',
+						price: '9 990₽',
+						starRate: 5,
+						rating: 4,
+						reviews: '140',
+						lux: true
+						})
+					+previewroom({
+						img: '/public/room_image/room11.png',
+						number: '№888',
+						price: '6 990₽',
+						starRate: 5,
+						rating: 2,
+						reviews: 75
+						})
+					+previewroom({
+						img: '/public/room_image/room3.png',
+						number: '№943',
+						price: '8 990₽',
+						starRate: 5,
+						rating: 1,
+						reviews: 23,
+						lux: true
+						})
+					+previewroom({
+						img: '/public/room_image/room4.png',
+						number: '№243',
+						price: '10 990₽',
+						starRate: 5,
+						rating: 5,
+						reviews: 324
+						})
+					+previewroom({
+						img: '/public/room_image/room5.png',
+						number: '№530',
+						price: '9 990₽',
+						starRate: 5,
+						rating: 2,
+						reviews: 98
+						})
+					+previewroom({
+						img: '/public/room_image/room6.png',
+						number: '№213',
+						price: '7 990₽',
+						starRate: 5,
+						rating: 5,
+						reviews: 5
+						})
+					+previewroom({
+						img: '/public/room_image/room7.png',
+						number: '№362',
+						price: '8 490₽',
+						starRate: 5,
+						rating: 1,
+						reviews: 2
+						})
+					+previewroom({
+						img: '/public/room_image/room8.png',
+						number: '№492',
+						price: '9 990₽',
+						starRate: 5,
+						rating: 2,
+						reviews: 90
+						})
+					+previewroom({
+						img: '/public/room_image/room9.png',
+						number: '№217',
+						price: '7 990₽',
+						starRate: 5,
+						rating: 4,
+						reviews: 140
+						})
+					+previewroom({
+						img: '/public/room_image/room10.png',
+						number: '№412',
+						price: '9 990₽',
+						starRate: 5,
+						rating: 3,
+						reviews: 429
+						})
+					+previewroom({
+						img: '/public/room_image/room11.png',
+						number: '№495',
+						price: '3 990₽',
+						starRate: 5,
+						rating: 2,
+						reviews: 10
+						})
+					+previewroom({
+						img: '/public/room_image/room12.png',
+						number: '№42',
+						price: '5 490₽',
+						starRate: 5,
+						rating: 5,
+						reviews: 14
+						})

@@ -6,7 +6,6 @@ const clickHanlder = e => {
 	const action = e.target.getAttribute('data-action');
 	// if element where event happened 
 	// dont have data-action atribute
-	console.log(action)
 	if(!action) return; // return
 	// 
 	switch(action) {
