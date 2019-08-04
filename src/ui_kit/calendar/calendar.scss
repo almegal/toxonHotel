@@ -11,6 +11,10 @@
 		display: flex;
 		justify-content: space-between;
 		// 
+		.datedropdown__header {
+			width: 100%;
+			max-width: 150px;
+		}
 		.datedropdown__title {
 			padding-bottom: 5px;
 		}
@@ -18,10 +22,8 @@
 		.datedropdown__input {
 			display: flex;
 			// set width and height
-			width: 150px;
 			height: 44px;
 			// set border
-			background: #FFFFFF;
 			border: 1px solid rgba(31, 32, 65, 0.25);
 			box-sizing: border-box;
 			border-radius: 4px;
@@ -96,8 +98,8 @@
 			    text-align: center;
 			    /* justify-content: unset; */
 				li {	
-					width: 40px;
-					height: 40px;
+					width: 13.5%;
+					display: block;
 					cursor: pointer;
 					span {
 						margin: 13px 0;
@@ -135,5 +137,32 @@
 	    padding-bottom: 20px;
 	    display: flex;
 	    justify-content: space-between;
+	}
+}
+
+//
+@media screen and  (max-width: 346px) {
+	.calendar {
+		.datedropdown {
+			.datedropdown__header {
+				p {
+					font-size: 12px;
+				}
+			}
+		}	
+	}
+}
+// 
+@media screen and  (max-width: 374px) {
+	.calendar {
+		.calendar__content {
+			.widget__content {
+				.widget__days {
+					.widget__li.current {
+						border-radius: 8px;
+					}
+				}
+			}
+		}
 	}
 }

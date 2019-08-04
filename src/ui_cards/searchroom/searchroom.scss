@@ -30,12 +30,3 @@
         top: -12px;
     }
 }
-
-// 
-// При разрешение 375 и меньше добавить прозрачность цвета фону
-
-@media screen and  (max-width: 376px) {
-    .searchroom {
-        background: #ffffff40;
-    }
-}

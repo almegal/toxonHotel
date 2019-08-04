@@ -1,11 +1,13 @@
 .dropdown.dropdown_size_s {
-  width: 100%;
-  max-width: 266px;
+	max-width: 266px;
+	min-width: 241px;
+
 }
 .dropdown.dropdown_size_m {
-  max-width: 320px;
+	width: 100%;
+	max-width: 320px;
 }
 .dropdown.dropdown_size_l {
-  width: 100%;
-  max-width: 480px;
+	width: 100%;
+	max-width: 480px;
 }

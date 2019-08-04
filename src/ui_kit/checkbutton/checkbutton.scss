@@ -1,5 +1,6 @@
 //import modificators
 @import "./_type/checkbutton_type";
+@import "./_size/checkbutton_size";
 .checkbutton {
   width: 100%;
   // make one by one
@@ -22,7 +23,13 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
+        font-weight: bold;
+        color: $DARK_75;
+        letter-spacing: 0px;
       }
+      .checkbox__text {
+          padding-left: 30px;
+        }
       // disable standart checked button
       input {
         position: absolute;

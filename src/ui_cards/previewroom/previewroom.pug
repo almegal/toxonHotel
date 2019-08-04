@@ -4,9 +4,11 @@ mixin previewroom(options)
 		img(class='previewroom__img', src=options.img)
 		.previewroom__header
 			h2= options.number 
-				span(class='purple') люкс
+				- if (options.lux) {
+					span(class='purple') люкс
+				-	}
 			p 
-				span(class='bold') 9 990₽ 
+				span(class='bold')= options.price
 				|	в сутки
 		.previewroom__underline
 		.previewroom__footer

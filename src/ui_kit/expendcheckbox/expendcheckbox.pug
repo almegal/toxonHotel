@@ -2,8 +2,11 @@ include ../checkbutton/checkbutton
 
 mixin expendcheckbox(options)
 
-  -
-  .expendcheckbox
+  - let className = 'expendcheckbox '
+  - if (options.modificator) {
+  -   className = className + options.modificator
+  - }
+  div(class=className)
     .expendcheckbox__header
       h3= options.title
       span(class='expendcheckbox__arrow', data-action='arrow')
