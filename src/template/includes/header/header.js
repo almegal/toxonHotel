@@ -20,11 +20,11 @@ const clickHanlder = e => {
 const toggleAction = e => {
 	// get elements
 	const menu = e.currentTarget.getElementsByClassName('header__right')[0];
-	const toggle = e.currentTarget.getElementsByClassName('header__toggle')[0].children[0];
+	const toggle = e.currentTarget.getElementsByClassName('header__toggle')[0];
 	// 
 	// 
 	menu.className = menu.className === 'header__right' ? 'header__right opened' : 'header__right';
-	toggle.className = menu.className === 'header__right' ? '' : 'rotate';
+	toggle.className = toggle.className === 'header__toggle' ? 'header__toggle opened' : 'header__toggle';
 
 }
 /*

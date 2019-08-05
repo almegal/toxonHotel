@@ -1,7 +1,7 @@
-extends ../layout.pug
+extends ../../layout.pug
 
-include ../../ui_kit/descriptionblock/descriptionblock
-include ../../ui_kit/bulletlist/bulletlist
+include ../../../ui_kit/descriptionblock/descriptionblock
+include ../../../ui_kit/bulletlist/bulletlist
 
 block content
 	.wrapper.wrapper-room
@@ -28,4 +28,4 @@ block content
 						+bulletlist({title: 'Правила', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00',]})
 						+bulletlist({title: 'Отмена', items: ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00',]})
 				.room__right
-					include ../../ui_cards/booking/booking
+					include ../../../ui_cards/booking/booking

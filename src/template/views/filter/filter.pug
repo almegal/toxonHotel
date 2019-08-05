@@ -9,8 +9,9 @@ include ../../../ui_cards/previewroom/previewroom
 block content
 	.wrapper.wrapper-filter
 		.filter__content
-			.filter__icon
-				img(data-action='filter' width=24 height=24 src=require('./../../../public/filter.svg'))
+			.filter__icon(data-action='filter')
+				p(class='icon__open' ) Фильтры
+				p(class='icon__close') X
 			.filter__left
 				+dropdown({
 					title: 'даты пребывания в отеле',

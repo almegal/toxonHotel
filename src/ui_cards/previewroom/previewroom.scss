@@ -1,4 +1,8 @@
 .previewroom {
+	&:hover {
+		transform: scale(1.03);
+	}
+	cursor: pointer;
 	// height: 257px;
 	width: 100%;
 	max-width: 270px;
