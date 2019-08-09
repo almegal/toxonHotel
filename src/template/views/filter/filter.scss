@@ -31,6 +31,10 @@
           margin-left: 12px;
         }
       }
+      .filter__pagination {
+          display: flex;
+          justify-content: center;
+      }
     }
   }
 }
@@ -93,18 +97,12 @@
         left: -296px;
         position: absolute;
         transition-property: left;
-        transition-duration: 0.5s;
+        transition-duration: 0s;
         transition-timing-function: ease;
         transition-delay: 0s;
 
       }
       .filter__right {
-        display: block;
-        visibility: visible;
-        transition-property: visibility;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-        transition-delay: 0.4s;
         width: 100%;
         .filter__rooms {
           .previewroom {
@@ -126,23 +124,15 @@
         }
      	}
      	.filter__left {
+        transition-duration: 0.5s;
         padding-left: 25px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
      		left: 0;
-        transition-property: left;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-        transition-delay: 0s;
      	}
      	.filter__right {
         display: none;
-        visibility: hidden;
-        transition-property: visibility;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
-        transition-delay: 0.4s;
      	}
      }
   }

@@ -2,7 +2,7 @@ exports.module = (() => {
 	// get contetn by filter views
 const content = document.getElementsByClassName('filter__content')[0];
 // if content not exsist stop script
-if(content.length === 0) {
+if(!content) {
 	return null
 }
 // 
@@ -17,6 +17,7 @@ const toggleHandler = e => {
 	const filter = e.currentTarget;
 	// 
 	// 
+	window.scrollTo({top: 0});
 	filter.className = filter.className === 'filter__content' ? 'filter__content opened' : 'filter__content';
 }
 // 
