@@ -5,34 +5,34 @@ module.exprots = (() => {
 		return;
 	}
 	// initializate pagination from data-pages attribute
-	const initialization = (element) => {
+	const initialization = (element=null) => {
 		// get count pages from data-pages attribute
-		const pages = element.getElementsByClassName('pagination__content')[0].getAttribute('data-pages');
-		// 
+		//  in real set count of pages from servre via localstorage or set to data-pages atrribute
+		// const pages = element.getElementsByClassName('pagination__content')[0].getAttribute('data-pages');
+		// set state to pagination
 		const stateToSave = {
-			count: pages,
-			currnentPages: 2
+			count: 15,
+			currentPages: 1
 		}
-		// 
-		// 
+		// if pagintation state exsist
+		//  save to current state
 		if(!localStorage.getItem('pagination')) {
 			localStorage.setItem('pagination', JSON.stringify(stateToSave));
 			return;
 		}
-		// 
-		// 
+		// create pagistation state
+		//  
 		const state = JSON.parse(localStorage.getItem('pagination'));
 		const newState = {
 			...state,
 			...stateToSave
 		}
 		// 
-		// 
+		// save to state
 		localStorage.setItem('pagination', JSON.stringify(newState))
 	}
-	
-	initialization(pagination);
-
+	// 
+	// 
 	const createPagination = (parentNode) => {
 		// 
 		// 
@@ -44,14 +44,25 @@ module.exprots = (() => {
 		for (var i = 1; i <= pagesState.count; i++) {
 			// 
 			const li = document.createElement('li');
-			// 
-			// 
-			li.className = i === pagesState.currnentPages
-						 ? 'pagination__li pagination_state_current'
-						 : 'pagination__li';
-			li.innerHTML = `<span>${i}</span>`;
-			// 
-			ul.appendChild(li);
+			if (i === pagesState.count - 1) {
+				li.className = i === pagesState.currentPages
+							 ? 'pagination__li pagination_state_current'
+							 : 'pagination__li';
+				li.innerHTML = `<span>...</span>`;
+				// 
+				ul.appendChild(li);
+			}
+
+			if(i < 4 || i === pagesState.count) {
+				// 
+				// 
+				li.className = i === pagesState.currentPages
+							 ? 'pagination__li pagination_state_current'
+							 : 'pagination__li';
+				li.innerHTML = `<span>${i}</span>`;
+				// 
+				ul.appendChild(li);
+			}
 		};
 		// 
 		// 
@@ -69,5 +80,10 @@ module.exprots = (() => {
 		// 
 		parentNode.appendChild(ul);
 	};
+	// 
+	// 
+	// call initiazlization without arguments;
+	initialization();
+	// 
 	createPagination(pagination.children[1]);
  })()

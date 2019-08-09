@@ -1,5 +1,4 @@
 .pagination {
-	width: 100%;
 	.pagination__content {
 		.pagination__ul {
 			padding: 0;
@@ -38,6 +37,11 @@
 				margin: 10px 0
 				}
 			}
+		}
+	}
+	.pagination__footer {
+		p {
+		    letter-spacing: 0.6;
 		}
 	}
 }
