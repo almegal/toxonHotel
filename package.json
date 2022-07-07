@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/almegal/toxonHotel#readme",
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
